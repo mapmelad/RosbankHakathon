@@ -12,6 +12,7 @@
 		54EFFF9221A00BD90074FFCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9021A00BD90074FFCB /* Main.storyboard */; };
 		54EFFF9421A00BDA0074FFCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9321A00BDA0074FFCB /* Assets.xcassets */; };
 		54EFFF9721A00BDA0074FFCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9521A00BDA0074FFCB /* LaunchScreen.storyboard */; };
+		54EFFF9F21A018DC0074FFCB /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9E21A018DC0074FFCB /* Main2.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		54EFFF9321A00BDA0074FFCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54EFFF9621A00BDA0074FFCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54EFFF9821A00BDA0074FFCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54EFFF9E21A018DC0074FFCB /* Main2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				54EFFF8C21A00BD90074FFCB /* AppDelegate.swift */,
 				54EFFF8E21A00BD90074FFCB /* ViewController.swift */,
 				54EFFF9021A00BD90074FFCB /* Main.storyboard */,
+				54EFFF9E21A018DC0074FFCB /* Main2.storyboard */,
 				54EFFF9321A00BDA0074FFCB /* Assets.xcassets */,
 				54EFFF9521A00BDA0074FFCB /* LaunchScreen.storyboard */,
 				54EFFF9821A00BDA0074FFCB /* Info.plist */,
@@ -124,6 +127,7 @@
 			files = (
 				54EFFF9721A00BDA0074FFCB /* LaunchScreen.storyboard in Resources */,
 				54EFFF9421A00BDA0074FFCB /* Assets.xcassets in Resources */,
+				54EFFF9F21A018DC0074FFCB /* Main2.storyboard in Resources */,
 				54EFFF9221A00BD90074FFCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
