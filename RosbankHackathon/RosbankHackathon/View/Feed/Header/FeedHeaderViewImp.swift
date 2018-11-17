@@ -69,6 +69,13 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
         return collection
     }()
 
+    private let separatorView: UIView = {
+        let separator = UIView()
+        separator.backgroundColor = #colorLiteral(red: 0.7422102094, green: 0.764362216, blue: 0.7821244597, alpha: 1).withAlphaComponent(0.7)
+
+        return separator
+    }()
+
     // Methods
 
     func setup(with title: String, collectionViewDataProvider: CollectionViewDataProvider) {
@@ -91,7 +98,7 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
     func internalInit() {
         [titleLabel, searchBar,
          storiesTitleLabel, storiesSeeAllLabel,
-         storyCollection].forEach(addSubview)
+         storyCollection, separatorView].forEach(addSubview)
 
         setupHeader()
         setupCollectionView()
@@ -134,7 +141,7 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
         storiesSeeAllLabel.pin.right(15).vCenter(to: storiesTitleLabel.edge.vCenter).sizeToFit()
         storyCollection.pin.height(64).below(of: storiesSeeAllLabel).marginTop(12).horizontally()
 
-        print(storyCollection.frame.maxY)
+        separatorView.pin.height(1).horizontally().bottom()
     }
 }
 
