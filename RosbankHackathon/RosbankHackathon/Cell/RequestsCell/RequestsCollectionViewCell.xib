@@ -28,20 +28,20 @@
                                 <color key="textColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ищет вшмупсель. Необходимо совместно пойти вместе и получить зарплату." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twl-eS-EDy">
-                                <rect key="frame" x="60" y="35" width="305" height="33.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ищет вшмупсель." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twl-eS-EDy">
+                                <rect key="frame" x="60" y="32" width="305" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" до 25 ноября" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUM-eg-wKv">
-                                <rect key="frame" x="80" y="73" width="285" height="16"/>
+                                <rect key="frame" x="80" y="53.5" width="285" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.2627450980392157" green="0.26379683613777161" blue="0.26379683613777161" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-circular-outline" translatesAutoresizingMaskIntoConstraints="NO" id="b3Y-s8-XCg">
-                                <rect key="frame" x="60" y="73.5" width="15" height="15"/>
+                                <rect key="frame" x="60" y="54" width="15" height="15"/>
                                 <color key="tintColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="7Fh-F1-KKR"/>
@@ -109,12 +109,12 @@
                             <constraint firstAttribute="bottom" secondItem="dko-H1-t0X" secondAttribute="bottom" id="SLP-aV-KoN"/>
                             <constraint firstItem="rxX-qM-gd7" firstAttribute="top" secondItem="y3b-4D-GmN" secondAttribute="top" constant="10" id="SQR-Fe-Srj"/>
                             <constraint firstItem="f24-sb-eC1" firstAttribute="centerY" secondItem="5GS-ot-5zn" secondAttribute="centerY" id="Sz4-CN-UZK"/>
-                            <constraint firstItem="Twl-eS-EDy" firstAttribute="top" secondItem="Mq0-hA-uHg" secondAttribute="bottom" constant="5" id="TYj-7c-ATa"/>
                             <constraint firstItem="Mq0-hA-uHg" firstAttribute="leading" secondItem="5GS-ot-5zn" secondAttribute="trailing" constant="5" id="TcH-yx-n06"/>
                             <constraint firstItem="eXO-uV-1iA" firstAttribute="leading" secondItem="y3b-4D-GmN" secondAttribute="leading" constant="8" id="TtF-PA-pVe"/>
                             <constraint firstItem="b3Y-s8-XCg" firstAttribute="top" secondItem="Twl-eS-EDy" secondAttribute="bottom" constant="5" id="Vdb-8z-Lkk"/>
                             <constraint firstAttribute="trailing" secondItem="dko-H1-t0X" secondAttribute="trailing" id="W1z-C0-VLS"/>
                             <constraint firstAttribute="trailing" secondItem="dUM-eg-wKv" secondAttribute="trailing" constant="10" id="WtU-vI-jd7"/>
+                            <constraint firstItem="Twl-eS-EDy" firstAttribute="top" secondItem="rxX-qM-gd7" secondAttribute="bottom" constant="4" id="ZCL-eo-ORW"/>
                             <constraint firstItem="b3Y-s8-XCg" firstAttribute="leading" secondItem="eXO-uV-1iA" secondAttribute="trailing" constant="10" id="aUa-dp-Eac"/>
                             <constraint firstItem="rxX-qM-gd7" firstAttribute="leading" secondItem="eXO-uV-1iA" secondAttribute="trailing" constant="10" id="c9A-rD-4Bo"/>
                             <constraint firstItem="5GS-ot-5zn" firstAttribute="leading" secondItem="f24-sb-eC1" secondAttribute="trailing" constant="5" id="ct1-Z1-jcp"/>
@@ -134,18 +134,24 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="341" height="128"/>
             <connections>
-                <outlet property="dealsImage" destination="Mq0-hA-uHg" id="KwG-NO-hCz"/>
-                <outlet property="imageView" destination="eXO-uV-1iA" id="P6K-7o-eFi"/>
+                <outlet property="categoryImageView" destination="Fg8-7f-S50" id="lyh-28-E5p"/>
+                <outlet property="categoryView" destination="eXO-uV-1iA" id="ncE-VC-EAV"/>
+                <outlet property="deadlineLabel" destination="dUM-eg-wKv" id="dh7-W8-VKn"/>
+                <outlet property="descriptionLabel" destination="Twl-eS-EDy" id="ODW-5b-wZZ"/>
+                <outlet property="firstImageView" destination="f24-sb-eC1" id="moB-5h-IG1"/>
+                <outlet property="lastImageView" destination="Mq0-hA-uHg" id="K1Z-6M-FAZ"/>
+                <outlet property="middleImageView" destination="5GS-ot-5zn" id="P2T-Fs-y7N"/>
+                <outlet property="nameLabel" destination="rxX-qM-gd7" id="N06-Ae-klJ"/>
                 <outlet property="timeImage" destination="b3Y-s8-XCg" id="Xam-J8-wi5"/>
             </connections>
             <point key="canvasLocation" x="285.60000000000002" y="81.859070464767626"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="clock-circular-outline" width="102.40000152587891" height="102.40000152587891"/>
-        <image name="crowns" width="512" height="512"/>
-        <image name="hand-shake" width="102.40000152587891" height="102.40000152587891"/>
-        <image name="light" width="400.69564819335938" height="400.69564819335938"/>
-        <image name="store" width="400.69564819335938" height="400.69564819335938"/>
+        <image name="clock-circular-outline" width="128" height="128"/>
+        <image name="crowns" width="128" height="128"/>
+        <image name="hand-shake" width="128" height="128"/>
+        <image name="light" width="128" height="128"/>
+        <image name="store" width="128" height="128"/>
     </resources>
 </document>

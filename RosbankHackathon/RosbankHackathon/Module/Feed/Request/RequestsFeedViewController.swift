@@ -8,6 +8,63 @@
 
 import UIKit
 
+// ==
+
+enum CategoryKind {
+    case none
+
+    var stringValue: String {
+        switch self {
+        case .none:
+            return "none"
+        }
+    }
+}
+
+enum AchievementKind {
+    case none
+
+    var icon: UIImage? {
+        switch self {
+        case .none:
+            return nil
+        }
+    }
+}
+
+struct RequestFeedModel {
+    let name: String
+    let confirmedDeals: Int
+    let requestDescription: String
+    let categories: [CategoryKind]
+    let achievements: [AchievementKind]
+    let deadline: Date
+}
+
+struct RequestFeedViewModel {
+    let name: String
+    let requestDescription: String
+    let achievements: [UIImage]
+    let categories: String
+    let deadline: String
+}
+
+// ==
+
+final class RequestFeedDataProvider {
+    // MARK: - Interface
+
+    func get() -> [RequestFeedViewModel] {
+        let items = [RequestFeedViewModel(name: "Some name",
+                                          requestDescription: "some descr",
+                                          achievements: [],
+                                          categories: "dasda",
+                                          deadline: "25 nov.")]
+
+        return items
+    }
+}
+
 final class RequestsFeedViewController: UIViewController {
     // MARK: - Outlets
 
@@ -35,6 +92,12 @@ final class RequestsFeedViewController: UIViewController {
         return view
     }()
 
+    private lazy var datasource: [RequestFeedViewModel] = {
+        let provider = RequestFeedDataProvider()
+
+        return provider.get()
+    }()
+
     // MARK: - Overrides
 
     override func viewDidLoad() {
@@ -59,13 +122,26 @@ final class RequestsFeedViewController: UIViewController {
 
 extension RequestsFeedViewController: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return datasource.count
     }
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: RequestsCollectionViewCell = collectionView.dequeueReusableCell(at: indexPath)
+        let model = getModel(at: indexPath)
+        cell.setup(with: model)
 
         return cell
+    }
+
+    private func getCell() -> RequestsCollectionViewCell {
+        let nib = UINib(nibName: "RequestsCollectionViewCell", bundle: nil)
+        let cell: RequestsCollectionViewCell = nib.instantiate(withOwner: self, options: nil)[0] as! RequestsCollectionViewCell
+
+        return cell
+    }
+
+    private func getModel(at indexPath: IndexPath) -> RequestFeedViewModel {
+        return datasource[indexPath.row]
     }
 }
 
@@ -73,7 +149,13 @@ extension RequestsFeedViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize: CGRect = UIScreen.main.bounds
         let screenWidth = screenSize.width
-        return CGSize(width: screenWidth, height: 100)
+
+        let cell = getCell()
+        let model = getModel(at: indexPath)
+        cell.setup(with: model)
+        cell.layoutSubviews()
+
+        return CGSize(width: screenWidth, height: cell.intrinsicContentSize.height)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

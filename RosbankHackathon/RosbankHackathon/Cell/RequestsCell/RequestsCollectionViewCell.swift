@@ -8,19 +8,62 @@
 
 import UIKit
 
-class RequestsCollectionViewCell: UICollectionViewCell {
+final class RequestsCollectionViewCell: UICollectionViewCell {
+    // MARK: - Outlets
 
-    @IBOutlet var imageView: UIView!
-    @IBOutlet var dealsImage: UIImageView!
-    @IBOutlet var timeImage: UIImageView!
-    
+    @IBOutlet
+    private var nameLabel: UILabel!
+
+    @IBOutlet
+    private var descriptionLabel: UILabel!
+
+    @IBOutlet
+    private var categoryView: UIView!
+
+    @IBOutlet
+    private var categoryImageView: UIImageView!
+
+    @IBOutlet
+    private var firstImageView: UIImageView!
+
+    @IBOutlet
+    private var middleImageView: UIImageView!
+
+    @IBOutlet
+    private var lastImageView: UIImageView!
+
+    @IBOutlet
+    private var timeImage: UIImageView!
+
+    @IBOutlet
+    private var deadlineLabel: UILabel!
+
+    // MARK: - Setup
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
         timeImage.tintColor = UIColor.hex(0x434343)
-        dealsImage.tintColor = UIColor.hex(0x434343)
-        imageView.backgroundColor = UIColor.hex(0xE2751B)
-        imageView.layer.cornerRadius = 21
+        lastImageView.tintColor = UIColor.hex(0x434343)
+        categoryImageView.backgroundColor = UIColor.hex(0xE2751B)
+        categoryImageView.layer.cornerRadius = 21
     }
 
+    func setup(with model: RequestFeedViewModel) {
+        nameLabel.text = model.name
+
+        for (idx, iv) in [lastImageView, middleImageView, firstImageView].enumerated() {
+            let image = model.achievements.item(at: idx)
+            iv?.image = image
+        }
+
+        descriptionLabel.text = model.requestDescription
+        deadlineLabel.text = model.deadline
+    }
+
+    override var intrinsicContentSize: CGSize {
+        let height: CGFloat = 65 + descriptionLabel.intrinsicContentSize.height
+
+        return CGSize.init(width: -1, height: height)
+    }
 }
