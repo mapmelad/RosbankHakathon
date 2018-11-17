@@ -17,6 +17,9 @@
 		54EFFFB021A0473D0074FFCB /* MainHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */; };
 		54EFFFB321A047940074FFCB /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFB221A047940074FFCB /* MainHeaderView.swift */; };
 		54EFFFB521A04B240074FFCB /* RequestsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFB421A04B240074FFCB /* RequestsFeedViewController.swift */; };
+		54EFFFB821A04DA50074FFCB /* RequestsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFB621A04DA50074FFCB /* RequestsCollectionViewCell.swift */; };
+		54EFFFB921A04DA50074FFCB /* RequestsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFFB721A04DA50074FFCB /* RequestsCollectionViewCell.xib */; };
+		54EFFFBC21A059950074FFCB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFBB21A059950074FFCB /* UIColorExtension.swift */; };
 		DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DAE5121A0213E0012040B /* UserSearchController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,9 @@
 		54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainHeaderView.xib; sourceTree = "<group>"; };
 		54EFFFB221A047940074FFCB /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		54EFFFB421A04B240074FFCB /* RequestsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsFeedViewController.swift; sourceTree = "<group>"; };
+		54EFFFB621A04DA50074FFCB /* RequestsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsCollectionViewCell.swift; sourceTree = "<group>"; };
+		54EFFFB721A04DA50074FFCB /* RequestsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestsCollectionViewCell.xib; sourceTree = "<group>"; };
+		54EFFFBB21A059950074FFCB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DE6DAE5121A0213E0012040B /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +78,7 @@
 				54EFFF8E21A00BD90074FFCB /* ViewController.swift */,
 				54EFFF9021A00BD90074FFCB /* Main.storyboard */,
 				54EFFF9E21A018DC0074FFCB /* Main2.storyboard */,
-				54EFFFB421A04B240074FFCB /* RequestsFeedViewController.swift */,
+				54EFFFBA21A04DB00074FFCB /* Requests */,
 				54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */,
 				54EFFF9321A00BDA0074FFCB /* Assets.xcassets */,
 				54EFFF9521A00BDA0074FFCB /* LaunchScreen.storyboard */,
@@ -89,11 +95,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		54EFFFBA21A04DB00074FFCB /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				54EFFFB421A04B240074FFCB /* RequestsFeedViewController.swift */,
+				54EFFFB621A04DA50074FFCB /* RequestsCollectionViewCell.swift */,
+				54EFFFB721A04DA50074FFCB /* RequestsCollectionViewCell.xib */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		DE6DAE5021A020680012040B /* Module */ = {
 			isa = PBXGroup;
 			children = (
 				DE6DAE5121A0213E0012040B /* UserSearchController.swift */,
 				54EFFFAD21A0460A0074FFCB /* UItableViewExtension.swift */,
+				54EFFFBB21A059950074FFCB /* UIColorExtension.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -160,6 +177,7 @@
 				54EFFFB021A0473D0074FFCB /* MainHeaderView.xib in Resources */,
 				54EFFF9421A00BDA0074FFCB /* Assets.xcassets in Resources */,
 				54EFFF9F21A018DC0074FFCB /* Main2.storyboard in Resources */,
+				54EFFFB921A04DA50074FFCB /* RequestsCollectionViewCell.xib in Resources */,
 				54EFFF9221A00BD90074FFCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +192,8 @@
 				54EFFFB521A04B240074FFCB /* RequestsFeedViewController.swift in Sources */,
 				54EFFFB321A047940074FFCB /* MainHeaderView.swift in Sources */,
 				54EFFF8F21A00BD90074FFCB /* ViewController.swift in Sources */,
+				54EFFFBC21A059950074FFCB /* UIColorExtension.swift in Sources */,
+				54EFFFB821A04DA50074FFCB /* RequestsCollectionViewCell.swift in Sources */,
 				54EFFFAE21A0460A0074FFCB /* UItableViewExtension.swift in Sources */,
 				DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */,
 				54EFFF8D21A00BD90074FFCB /* AppDelegate.swift in Sources */,
