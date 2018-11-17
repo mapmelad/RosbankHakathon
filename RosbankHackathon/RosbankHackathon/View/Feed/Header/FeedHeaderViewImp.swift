@@ -36,6 +36,25 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
         return bar
     }()
 
+    private let storiesTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Рекомендации"
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = UIColor.black
+
+        return label
+    }()
+
+    private let storiesSeeAllLabel: UILabel = {
+        let label = UILabel()
+        label.text = "См. все"
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = UIColor.black
+        label.textAlignment = .right
+
+        return label
+    }()
+
     private let storyCollection: UICollectionView = {
         let collection = UICollectionView(scrollDirection: .horizontal)
         let layout = collection.flowLayout!
@@ -70,7 +89,10 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
     }
 
     func internalInit() {
-        addSubviews(titleLabel, searchBar, storyCollection)
+        [titleLabel, searchBar,
+         storiesTitleLabel, storiesSeeAllLabel,
+         storyCollection].forEach(addSubview)
+
         setupHeader()
         setupCollectionView()
     }
@@ -107,7 +129,12 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
 
         titleLabel.pin.top(25).horizontally(15).sizeToFit(.width)
         searchBar.pin.below(of: titleLabel).marginTop(10).horizontally(6).sizeToFit(.width)
-        storyCollection.pin.height(64).below(of: searchBar).marginTop(8).horizontally()
+
+        storiesTitleLabel.pin.below(of: searchBar).marginTop(8).left(18).sizeToFit()
+        storiesSeeAllLabel.pin.right(15).vCenter(to: storiesTitleLabel.edge.vCenter).sizeToFit()
+        storyCollection.pin.height(64).below(of: storiesSeeAllLabel).marginTop(12).horizontally()
+
+        print(storyCollection.frame.maxY)
     }
 }
 

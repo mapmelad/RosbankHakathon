@@ -47,7 +47,7 @@ extension RequestsFeedViewController: UICollectionViewDataSource {
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: RequestsCollectionViewCell = collectionView.dequeueReusableCell(at: indexPath)
-        
+
         return cell
     }
 }
@@ -60,13 +60,13 @@ extension RequestsFeedViewController: UICollectionViewDelegate, UICollectionView
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 208)
+        return CGSize(width: collectionView.frame.width, height: 232)
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
             let header: FeedHeaderViewImp = collectionView.dequeueReusableView(of: .header, at: indexPath)
-            header.setup(with: "Title", collectionViewDataProvider: storiesProvider)
+            header.setup(with: "Запросы", collectionViewDataProvider: storiesProvider)
 
             return header
         }
