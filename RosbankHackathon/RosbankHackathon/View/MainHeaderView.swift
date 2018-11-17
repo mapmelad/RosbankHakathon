@@ -17,10 +17,12 @@ protocol HeaderView: HeaderViewOutput {
 }
 
 final class MainHeaderView: UIView, HeaderView {
-    // Methods
     
+    @IBOutlet var titleLabel: UILabel!
+    
+    // Methods
     func setup(with title: String) {
-        //titleLabel.text = title
+        titleLabel.text = title
     }
     
     // Output

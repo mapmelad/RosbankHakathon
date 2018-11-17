@@ -109,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="622" y="-616"/>
         </scene>
-        <!--View Controller-->
+        <!--Requests Feed View Controller-->
         <scene sceneID="7Tt-zN-VEQ">
             <objects>
-                <viewController id="FgG-UI-Dtw" sceneMemberID="viewController">
+                <viewController id="FgG-UI-Dtw" customClass="RequestsFeedViewController" customModule="RosbankHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iaz-hA-tHB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,6 +136,7 @@
                     <navigationItem key="navigationItem" id="bjb-b0-9e1"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="headerView" destination="cCr-q1-qCx" id="9gK-uy-YFN"/>
                         <outlet property="searchDisplayController" destination="sEA-Ea-Xju" id="pxK-c9-wri"/>
                     </connections>
                 </viewController>

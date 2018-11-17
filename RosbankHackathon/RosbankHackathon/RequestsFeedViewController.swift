@@ -9,7 +9,15 @@
 import UIKit
 
 class RequestsFeedViewController: UIViewController {
-
+    
+    @IBOutlet var headerView: MainHeaderView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+         //headerView.setup(with: "Запросы")
+        //Not work
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
