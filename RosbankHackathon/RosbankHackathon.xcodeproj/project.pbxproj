@@ -26,6 +26,10 @@
 		5431C68A21A0666700611034 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431C67A21A0666700611034 /* CosmosTouchTarget.swift */; };
 		5431C68B21A0666700611034 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431C67B21A0666700611034 /* RightToLeft.swift */; };
 		5431C68D21A0666700611034 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431C67D21A0666700611034 /* CosmosView.swift */; };
+		5431C69021A078F300611034 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431C68E21A078F300611034 /* OfferCollectionViewCell.swift */; };
+		5431C69121A078F300611034 /* OfferCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5431C68F21A078F300611034 /* OfferCollectionViewCell.xib */; };
+		5431C69721A0A0E600611034 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431C69521A0A0E600611034 /* StoriesCollectionViewCell.swift */; };
+		5431C69821A0A0E600611034 /* StoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5431C69621A0A0E600611034 /* StoriesCollectionViewCell.xib */; };
 		54EFFF8D21A00BD90074FFCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFF8C21A00BD90074FFCB /* AppDelegate.swift */; };
 		54EFFF8F21A00BD90074FFCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFF8E21A00BD90074FFCB /* ViewController.swift */; };
 		54EFFF9221A00BD90074FFCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9021A00BD90074FFCB /* Main.storyboard */; };
@@ -97,6 +101,10 @@
 		5431C67A21A0666700611034 /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosTouchTarget.swift; sourceTree = "<group>"; };
 		5431C67B21A0666700611034 /* RightToLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightToLeft.swift; sourceTree = "<group>"; };
 		5431C67D21A0666700611034 /* CosmosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosView.swift; sourceTree = "<group>"; };
+		5431C68E21A078F300611034 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
+		5431C68F21A078F300611034 /* OfferCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCollectionViewCell.xib; sourceTree = "<group>"; };
+		5431C69521A0A0E600611034 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		5431C69621A0A0E600611034 /* StoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		54EFFF8921A00BD90074FFCB /* RosbankHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosbankHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EFFF8C21A00BD90074FFCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54EFFF8E21A00BD90074FFCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +217,36 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		5431C69221A078F900611034 /* OfferCell */ = {
+			isa = PBXGroup;
+			children = (
+				5431C68E21A078F300611034 /* OfferCollectionViewCell.swift */,
+				5431C68F21A078F300611034 /* OfferCollectionViewCell.xib */,
+			);
+			path = OfferCell;
+			sourceTree = "<group>";
+		};
+		5431C69321A0A0AA00611034 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5431C69421A0A0CB00611034 /* StoriesCell */,
+				54EFFFBA21A04DB00074FFCB /* RequestsCell */,
+				5431C69221A078F900611034 /* OfferCell */,
+				5431C66121A05FE600611034 /* AwardCell */,
+				5431C66621A062C100611034 /* AwardStarsCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5431C69421A0A0CB00611034 /* StoriesCell */ = {
+			isa = PBXGroup;
+			children = (
+				5431C69521A0A0E600611034 /* StoriesCollectionViewCell.swift */,
+				5431C69621A0A0E600611034 /* StoriesCollectionViewCell.xib */,
+			);
+			path = StoriesCell;
+			sourceTree = "<group>";
+		};
 		54EFFF8021A00BD90074FFCB = {
 			isa = PBXGroup;
 			children = (
@@ -229,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				DE10C8CF21A069050080848E /* Service */,
-				5431C66B21A0666700611034 /* Cosmos */,
 				DE1FFC5321A04EBC00C696AD /* Extension */,
 				DE1FFC2021A04DB300C696AD /* support */,
 				54EFFFB121A047770074FFCB /* View */,
@@ -238,9 +275,7 @@
 				54EFFF8E21A00BD90074FFCB /* ViewController.swift */,
 				54EFFF9021A00BD90074FFCB /* Main.storyboard */,
 				54EFFF9E21A018DC0074FFCB /* Main2.storyboard */,
-				5431C66621A062C100611034 /* AwardStarsCell */,
-				5431C66121A05FE600611034 /* AwardCell */,
-				54EFFFBA21A04DB00074FFCB /* Requests */,
+				5431C69321A0A0AA00611034 /* Cell */,
 				54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */,
 				54EFFF9321A00BDA0074FFCB /* Assets.xcassets */,
 				54EFFF9521A00BDA0074FFCB /* LaunchScreen.storyboard */,
@@ -257,13 +292,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		54EFFFBA21A04DB00074FFCB /* Requests */ = {
+		54EFFFBA21A04DB00074FFCB /* RequestsCell */ = {
 			isa = PBXGroup;
 			children = (
 				54EFFFB621A04DA50074FFCB /* RequestsCollectionViewCell.swift */,
 				54EFFFB721A04DA50074FFCB /* RequestsCollectionViewCell.xib */,
 			);
-			path = Requests;
+			path = RequestsCell;
 			sourceTree = "<group>";
 		};
 		DE10C8CA21A068BD0080848E /* Feed */ = {
@@ -311,6 +346,7 @@
 		DE1FFC2121A04DB600C696AD /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				5431C66B21A0666700611034 /* Cosmos */,
 				DE1FFC2221A04DDF00C696AD /* PinLayout */,
 			);
 			path = lib;
@@ -502,8 +538,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5431C69821A0A0E600611034 /* StoriesCollectionViewCell.xib in Resources */,
 				54EFFF9721A00BDA0074FFCB /* LaunchScreen.storyboard in Resources */,
 				54EFFFB021A0473D0074FFCB /* MainHeaderView.xib in Resources */,
+				5431C69121A078F300611034 /* OfferCollectionViewCell.xib in Resources */,
 				54EFFF9421A00BDA0074FFCB /* Assets.xcassets in Resources */,
 				54EFFF9F21A018DC0074FFCB /* Main2.storyboard in Resources */,
 				54EFFFB921A04DA50074FFCB /* RequestsCollectionViewCell.xib in Resources */,
@@ -549,6 +587,7 @@
 				DE1FFC4021A04DF300C696AD /* PinLayout+Layouting.swift in Sources */,
 				DE1FFC5021A04DF300C696AD /* PinLayout+Relative.swift in Sources */,
 				DE10C8C421A05D720080848E /* Cell+Reuse.swift in Sources */,
+				5431C69021A078F300611034 /* OfferCollectionViewCell.swift in Sources */,
 				DE1FFC4F21A04DF300C696AD /* CALayer+PinLayout.swift in Sources */,
 				DE1FFC3F21A04DF300C696AD /* PinLayout+Coordinates.swift in Sources */,
 				DE1FFC4821A04DF300C696AD /* Filters.swift in Sources */,
@@ -559,6 +598,7 @@
 				DE1FFC4C21A04DF300C696AD /* UIView+PinLayout.swift in Sources */,
 				DE808EEB21A050CA00FD6165 /* OfferFeedCell.swift in Sources */,
 				DE1FFC4A21A04DF300C696AD /* Types+Description.swift in Sources */,
+				5431C69721A0A0E600611034 /* StoriesCollectionViewCell.swift in Sources */,
 				5431C68A21A0666700611034 /* CosmosTouchTarget.swift in Sources */,
 				DE90488F21A07D7200718F8C /* FeedOfferGeneralizeSearchDataProvider.swift in Sources */,
 				54EFFFBC21A059950074FFCB /* UIColorExtension.swift in Sources */,
