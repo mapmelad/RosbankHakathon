@@ -61,7 +61,7 @@ extension OfferFeedController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
             let header: FeedHeaderViewImp = collectionView.dequeueReusableView(of: .header, at: indexPath)
-            header.setup(with: "Title", collectionViewDataProvider: storiesProvider)
+            header.setup(with: "Услуги", collectionViewDataProvider: storiesProvider)
 
             return header
         }
