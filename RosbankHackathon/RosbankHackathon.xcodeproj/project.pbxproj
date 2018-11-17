@@ -17,6 +17,28 @@
 		54EFFFB021A0473D0074FFCB /* MainHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */; };
 		54EFFFB321A047940074FFCB /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFB221A047940074FFCB /* MainHeaderView.swift */; };
 		54EFFFB521A04B240074FFCB /* RequestsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFB421A04B240074FFCB /* RequestsFeedViewController.swift */; };
+		DE1FFC3C21A04DF300C696AD /* PinLayout+Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2421A04DF200C696AD /* PinLayout+Warning.swift */; };
+		DE1FFC3D21A04DF300C696AD /* PinSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2521A04DF200C696AD /* PinSafeArea.swift */; };
+		DE1FFC3E21A04DF300C696AD /* TypesImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2621A04DF200C696AD /* TypesImpl.swift */; };
+		DE1FFC3F21A04DF300C696AD /* PinLayout+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2721A04DF200C696AD /* PinLayout+Coordinates.swift */; };
+		DE1FFC4021A04DF300C696AD /* PinLayout+Layouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2821A04DF200C696AD /* PinLayout+Layouting.swift */; };
+		DE1FFC4121A04DF300C696AD /* Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2921A04DF200C696AD /* Percent.swift */; };
+		DE1FFC4221A04DF300C696AD /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2A21A04DF200C696AD /* Coordinates.swift */; };
+		DE1FFC4321A04DF300C696AD /* PinLayout+Between.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2B21A04DF200C696AD /* PinLayout+Between.swift */; };
+		DE1FFC4421A04DF300C696AD /* PinLayout+WrapContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2C21A04DF300C696AD /* PinLayout+WrapContent.swift */; };
+		DE1FFC4521A04DF300C696AD /* SizeCalculable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2D21A04DF300C696AD /* SizeCalculable.swift */; };
+		DE1FFC4621A04DF300C696AD /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2E21A04DF300C696AD /* Pin.swift */; };
+		DE1FFC4721A04DF300C696AD /* Layoutable+PinLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2F21A04DF300C696AD /* Layoutable+PinLayout.swift */; };
+		DE1FFC4821A04DF300C696AD /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3021A04DF300C696AD /* Filters.swift */; };
+		DE1FFC4921A04DF300C696AD /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3121A04DF300C696AD /* Types.swift */; };
+		DE1FFC4A21A04DF300C696AD /* Types+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3221A04DF300C696AD /* Types+Description.swift */; };
+		DE1FFC4B21A04DF300C696AD /* PinLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3321A04DF300C696AD /* PinLayout.swift */; };
+		DE1FFC4C21A04DF300C696AD /* UIView+PinLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3521A04DF300C696AD /* UIView+PinLayout.swift */; };
+		DE1FFC4E21A04DF300C696AD /* PEdgeInsets+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3721A04DF300C696AD /* PEdgeInsets+Operators.swift */; };
+		DE1FFC4F21A04DF300C696AD /* CALayer+PinLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3821A04DF300C696AD /* CALayer+PinLayout.swift */; };
+		DE1FFC5021A04DF300C696AD /* PinLayout+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3921A04DF300C696AD /* PinLayout+Relative.swift */; };
+		DE1FFC5121A04DF300C696AD /* Layoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3A21A04DF300C696AD /* Layoutable.swift */; };
+		DE1FFC5221A04DF300C696AD /* PinLayout+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3B21A04DF300C696AD /* PinLayout+Size.swift */; };
 		DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DAE5121A0213E0012040B /* UserSearchController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +55,28 @@
 		54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainHeaderView.xib; sourceTree = "<group>"; };
 		54EFFFB221A047940074FFCB /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		54EFFFB421A04B240074FFCB /* RequestsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsFeedViewController.swift; sourceTree = "<group>"; };
+		DE1FFC2421A04DF200C696AD /* PinLayout+Warning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinLayout+Warning.swift"; sourceTree = "<group>"; };
+		DE1FFC2521A04DF200C696AD /* PinSafeArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinSafeArea.swift; sourceTree = "<group>"; };
+		DE1FFC2621A04DF200C696AD /* TypesImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesImpl.swift; sourceTree = "<group>"; };
+		DE1FFC2721A04DF200C696AD /* PinLayout+Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinLayout+Coordinates.swift"; sourceTree = "<group>"; };
+		DE1FFC2821A04DF200C696AD /* PinLayout+Layouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinLayout+Layouting.swift"; sourceTree = "<group>"; };
+		DE1FFC2921A04DF200C696AD /* Percent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Percent.swift; sourceTree = "<group>"; };
+		DE1FFC2A21A04DF200C696AD /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		DE1FFC2B21A04DF200C696AD /* PinLayout+Between.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinLayout+Between.swift"; sourceTree = "<group>"; };
+		DE1FFC2C21A04DF300C696AD /* PinLayout+WrapContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinLayout+WrapContent.swift"; sourceTree = "<group>"; };
+		DE1FFC2D21A04DF300C696AD /* SizeCalculable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCalculable.swift; sourceTree = "<group>"; };
+		DE1FFC2E21A04DF300C696AD /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		DE1FFC2F21A04DF300C696AD /* Layoutable+PinLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Layoutable+PinLayout.swift"; sourceTree = "<group>"; };
+		DE1FFC3021A04DF300C696AD /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
+		DE1FFC3121A04DF300C696AD /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		DE1FFC3221A04DF300C696AD /* Types+Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Types+Description.swift"; sourceTree = "<group>"; };
+		DE1FFC3321A04DF300C696AD /* PinLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinLayout.swift; sourceTree = "<group>"; };
+		DE1FFC3521A04DF300C696AD /* UIView+PinLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+PinLayout.swift"; sourceTree = "<group>"; };
+		DE1FFC3721A04DF300C696AD /* PEdgeInsets+Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PEdgeInsets+Operators.swift"; sourceTree = "<group>"; };
+		DE1FFC3821A04DF300C696AD /* CALayer+PinLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+PinLayout.swift"; sourceTree = "<group>"; };
+		DE1FFC3921A04DF300C696AD /* PinLayout+Relative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinLayout+Relative.swift"; sourceTree = "<group>"; };
+		DE1FFC3A21A04DF300C696AD /* Layoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layoutable.swift; sourceTree = "<group>"; };
+		DE1FFC3B21A04DF300C696AD /* PinLayout+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinLayout+Size.swift"; sourceTree = "<group>"; };
 		DE6DAE5121A0213E0012040B /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +110,7 @@
 		54EFFF8B21A00BD90074FFCB /* RosbankHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				DE1FFC2021A04DB300C696AD /* support */,
 				54EFFFB121A047770074FFCB /* View */,
 				DE6DAE5021A020680012040B /* Module */,
 				54EFFF8C21A00BD90074FFCB /* AppDelegate.swift */,
@@ -87,6 +132,67 @@
 				54EFFFB221A047940074FFCB /* MainHeaderView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DE1FFC2021A04DB300C696AD /* support */ = {
+			isa = PBXGroup;
+			children = (
+				DE1FFC2121A04DB600C696AD /* lib */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		DE1FFC2121A04DB600C696AD /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				DE1FFC2221A04DDF00C696AD /* PinLayout */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		DE1FFC2221A04DDF00C696AD /* PinLayout */ = {
+			isa = PBXGroup;
+			children = (
+				DE1FFC3421A04DF300C696AD /* Extensions */,
+				DE1FFC3021A04DF300C696AD /* Filters.swift */,
+				DE1FFC2321A04DF200C696AD /* Impl */,
+				DE1FFC3A21A04DF300C696AD /* Layoutable.swift */,
+				DE1FFC2F21A04DF300C696AD /* Layoutable+PinLayout.swift */,
+				DE1FFC2E21A04DF300C696AD /* Pin.swift */,
+				DE1FFC3321A04DF300C696AD /* PinLayout.swift */,
+				DE1FFC2B21A04DF200C696AD /* PinLayout+Between.swift */,
+				DE1FFC3921A04DF300C696AD /* PinLayout+Relative.swift */,
+				DE1FFC3B21A04DF300C696AD /* PinLayout+Size.swift */,
+				DE1FFC2C21A04DF300C696AD /* PinLayout+WrapContent.swift */,
+				DE1FFC2D21A04DF300C696AD /* SizeCalculable.swift */,
+				DE1FFC3121A04DF300C696AD /* Types.swift */,
+				DE1FFC3221A04DF300C696AD /* Types+Description.swift */,
+			);
+			path = PinLayout;
+			sourceTree = "<group>";
+		};
+		DE1FFC2321A04DF200C696AD /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				DE1FFC2421A04DF200C696AD /* PinLayout+Warning.swift */,
+				DE1FFC2521A04DF200C696AD /* PinSafeArea.swift */,
+				DE1FFC2621A04DF200C696AD /* TypesImpl.swift */,
+				DE1FFC2721A04DF200C696AD /* PinLayout+Coordinates.swift */,
+				DE1FFC2821A04DF200C696AD /* PinLayout+Layouting.swift */,
+				DE1FFC2921A04DF200C696AD /* Percent.swift */,
+				DE1FFC2A21A04DF200C696AD /* Coordinates.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		DE1FFC3421A04DF300C696AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DE1FFC3521A04DF300C696AD /* UIView+PinLayout.swift */,
+				DE1FFC3721A04DF300C696AD /* PEdgeInsets+Operators.swift */,
+				DE1FFC3821A04DF300C696AD /* CALayer+PinLayout.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DE6DAE5021A020680012040B /* Module */ = {
@@ -172,10 +278,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				54EFFFB521A04B240074FFCB /* RequestsFeedViewController.swift in Sources */,
+				DE1FFC4B21A04DF300C696AD /* PinLayout.swift in Sources */,
+				DE1FFC4621A04DF300C696AD /* Pin.swift in Sources */,
+				DE1FFC4421A04DF300C696AD /* PinLayout+WrapContent.swift in Sources */,
+				DE1FFC4921A04DF300C696AD /* Types.swift in Sources */,
+				DE1FFC4521A04DF300C696AD /* SizeCalculable.swift in Sources */,
+				DE1FFC3C21A04DF300C696AD /* PinLayout+Warning.swift in Sources */,
+				DE1FFC4321A04DF300C696AD /* PinLayout+Between.swift in Sources */,
+				DE1FFC5121A04DF300C696AD /* Layoutable.swift in Sources */,
 				54EFFFB321A047940074FFCB /* MainHeaderView.swift in Sources */,
+				DE1FFC4021A04DF300C696AD /* PinLayout+Layouting.swift in Sources */,
+				DE1FFC5021A04DF300C696AD /* PinLayout+Relative.swift in Sources */,
+				DE1FFC4F21A04DF300C696AD /* CALayer+PinLayout.swift in Sources */,
+				DE1FFC3F21A04DF300C696AD /* PinLayout+Coordinates.swift in Sources */,
+				DE1FFC4821A04DF300C696AD /* Filters.swift in Sources */,
+				DE1FFC3D21A04DF300C696AD /* PinSafeArea.swift in Sources */,
 				54EFFF8F21A00BD90074FFCB /* ViewController.swift in Sources */,
+				DE1FFC4721A04DF300C696AD /* Layoutable+PinLayout.swift in Sources */,
+				DE1FFC4C21A04DF300C696AD /* UIView+PinLayout.swift in Sources */,
+				DE1FFC4A21A04DF300C696AD /* Types+Description.swift in Sources */,
 				54EFFFAE21A0460A0074FFCB /* UItableViewExtension.swift in Sources */,
+				DE1FFC3E21A04DF300C696AD /* TypesImpl.swift in Sources */,
+				DE1FFC4221A04DF300C696AD /* Coordinates.swift in Sources */,
+				DE1FFC5221A04DF300C696AD /* PinLayout+Size.swift in Sources */,
+				DE1FFC4121A04DF300C696AD /* Percent.swift in Sources */,
 				DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */,
+				DE1FFC4E21A04DF300C696AD /* PEdgeInsets+Operators.swift in Sources */,
 				54EFFF8D21A00BD90074FFCB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
