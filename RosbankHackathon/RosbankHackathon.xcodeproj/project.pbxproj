@@ -13,6 +13,10 @@
 		54EFFF9421A00BDA0074FFCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9321A00BDA0074FFCB /* Assets.xcassets */; };
 		54EFFF9721A00BDA0074FFCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9521A00BDA0074FFCB /* LaunchScreen.storyboard */; };
 		54EFFF9F21A018DC0074FFCB /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9E21A018DC0074FFCB /* Main2.storyboard */; };
+		54EFFFAE21A0460A0074FFCB /* UItableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFAD21A0460A0074FFCB /* UItableViewExtension.swift */; };
+		54EFFFB021A0473D0074FFCB /* MainHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */; };
+		54EFFFB321A047940074FFCB /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFB221A047940074FFCB /* MainHeaderView.swift */; };
+		54EFFFB521A04B240074FFCB /* RequestsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFB421A04B240074FFCB /* RequestsFeedViewController.swift */; };
 		DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DAE5121A0213E0012040B /* UserSearchController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		54EFFF9621A00BDA0074FFCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54EFFF9821A00BDA0074FFCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54EFFF9E21A018DC0074FFCB /* Main2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
+		54EFFFAD21A0460A0074FFCB /* UItableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UItableViewExtension.swift; sourceTree = "<group>"; };
+		54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainHeaderView.xib; sourceTree = "<group>"; };
+		54EFFFB221A047940074FFCB /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
+		54EFFFB421A04B240074FFCB /* RequestsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsFeedViewController.swift; sourceTree = "<group>"; };
 		DE6DAE5121A0213E0012040B /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,11 +66,14 @@
 		54EFFF8B21A00BD90074FFCB /* RosbankHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				54EFFFB121A047770074FFCB /* View */,
 				DE6DAE5021A020680012040B /* Module */,
 				54EFFF8C21A00BD90074FFCB /* AppDelegate.swift */,
 				54EFFF8E21A00BD90074FFCB /* ViewController.swift */,
 				54EFFF9021A00BD90074FFCB /* Main.storyboard */,
 				54EFFF9E21A018DC0074FFCB /* Main2.storyboard */,
+				54EFFFB421A04B240074FFCB /* RequestsFeedViewController.swift */,
+				54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */,
 				54EFFF9321A00BDA0074FFCB /* Assets.xcassets */,
 				54EFFF9521A00BDA0074FFCB /* LaunchScreen.storyboard */,
 				54EFFF9821A00BDA0074FFCB /* Info.plist */,
@@ -70,10 +81,19 @@
 			path = RosbankHackathon;
 			sourceTree = "<group>";
 		};
+		54EFFFB121A047770074FFCB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54EFFFB221A047940074FFCB /* MainHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DE6DAE5021A020680012040B /* Module */ = {
 			isa = PBXGroup;
 			children = (
 				DE6DAE5121A0213E0012040B /* UserSearchController.swift */,
+				54EFFFAD21A0460A0074FFCB /* UItableViewExtension.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -137,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54EFFF9721A00BDA0074FFCB /* LaunchScreen.storyboard in Resources */,
+				54EFFFB021A0473D0074FFCB /* MainHeaderView.xib in Resources */,
 				54EFFF9421A00BDA0074FFCB /* Assets.xcassets in Resources */,
 				54EFFF9F21A018DC0074FFCB /* Main2.storyboard in Resources */,
 				54EFFF9221A00BD90074FFCB /* Main.storyboard in Resources */,
@@ -150,7 +171,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54EFFFB521A04B240074FFCB /* RequestsFeedViewController.swift in Sources */,
+				54EFFFB321A047940074FFCB /* MainHeaderView.swift in Sources */,
 				54EFFF8F21A00BD90074FFCB /* ViewController.swift in Sources */,
+				54EFFFAE21A0460A0074FFCB /* UItableViewExtension.swift in Sources */,
 				DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */,
 				54EFFF8D21A00BD90074FFCB /* AppDelegate.swift in Sources */,
 			);
@@ -229,7 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -284,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -299,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VD97XKT54M;
+				DEVELOPMENT_TEAM = W2H48J22L4;
 				INFOPLIST_FILE = RosbankHackathon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VD97XKT54M;
+				DEVELOPMENT_TEAM = W2H48J22L4;
 				INFOPLIST_FILE = RosbankHackathon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
