@@ -39,6 +39,8 @@
 		DE1FFC5021A04DF300C696AD /* PinLayout+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3921A04DF300C696AD /* PinLayout+Relative.swift */; };
 		DE1FFC5121A04DF300C696AD /* Layoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3A21A04DF300C696AD /* Layoutable.swift */; };
 		DE1FFC5221A04DF300C696AD /* PinLayout+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC3B21A04DF300C696AD /* PinLayout+Size.swift */; };
+		DE1FFC5621A04ECC00C696AD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC5521A04ECC00C696AD /* UIView+Extension.swift */; };
+		DE1FFC5821A04F8C00C696AD /* UICollectionVIew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC5721A04F8C00C696AD /* UICollectionVIew+Extensions.swift */; };
 		DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DAE5121A0213E0012040B /* UserSearchController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		DE1FFC3921A04DF300C696AD /* PinLayout+Relative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinLayout+Relative.swift"; sourceTree = "<group>"; };
 		DE1FFC3A21A04DF300C696AD /* Layoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layoutable.swift; sourceTree = "<group>"; };
 		DE1FFC3B21A04DF300C696AD /* PinLayout+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinLayout+Size.swift"; sourceTree = "<group>"; };
+		DE1FFC5521A04ECC00C696AD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		DE1FFC5721A04F8C00C696AD /* UICollectionVIew+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionVIew+Extensions.swift"; sourceTree = "<group>"; };
 		DE6DAE5121A0213E0012040B /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,7 @@
 		54EFFF8B21A00BD90074FFCB /* RosbankHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				DE1FFC5321A04EBC00C696AD /* Extension */,
 				DE1FFC2021A04DB300C696AD /* support */,
 				54EFFFB121A047770074FFCB /* View */,
 				DE6DAE5021A020680012040B /* Module */,
@@ -195,6 +200,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		DE1FFC5321A04EBC00C696AD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DE1FFC5421A04EBF00C696AD /* UIKit */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DE1FFC5421A04EBF00C696AD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				DE1FFC5721A04F8C00C696AD /* UICollectionVIew+Extensions.swift */,
+				DE1FFC5521A04ECC00C696AD /* UIView+Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		DE6DAE5021A020680012040B /* Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +299,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1FFC5821A04F8C00C696AD /* UICollectionVIew+Extensions.swift in Sources */,
 				54EFFFB521A04B240074FFCB /* RequestsFeedViewController.swift in Sources */,
+				DE1FFC5621A04ECC00C696AD /* UIView+Extension.swift in Sources */,
 				DE1FFC4B21A04DF300C696AD /* PinLayout.swift in Sources */,
 				DE1FFC4621A04DF300C696AD /* Pin.swift in Sources */,
 				DE1FFC4421A04DF300C696AD /* PinLayout+WrapContent.swift in Sources */,
