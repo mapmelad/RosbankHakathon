@@ -42,6 +42,7 @@
 		DE1FFC5621A04ECC00C696AD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC5521A04ECC00C696AD /* UIView+Extension.swift */; };
 		DE1FFC5821A04F8C00C696AD /* UICollectionVIew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC5721A04F8C00C696AD /* UICollectionVIew+Extensions.swift */; };
 		DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DAE5121A0213E0012040B /* UserSearchController.swift */; };
+		DE808EEB21A050CA00FD6165 /* OfferFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE808EEA21A050CA00FD6165 /* OfferFeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		DE1FFC5521A04ECC00C696AD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		DE1FFC5721A04F8C00C696AD /* UICollectionVIew+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionVIew+Extensions.swift"; sourceTree = "<group>"; };
 		DE6DAE5121A0213E0012040B /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
+		DE808EEA21A050CA00FD6165 /* OfferFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferFeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,10 +222,35 @@
 		DE6DAE5021A020680012040B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				DE808EE721A0509E00FD6165 /* Feed */,
 				DE6DAE5121A0213E0012040B /* UserSearchController.swift */,
 				54EFFFAD21A0460A0074FFCB /* UItableViewExtension.swift */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		DE808EE721A0509E00FD6165 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				DE808EE821A050A600FD6165 /* Offer */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		DE808EE821A050A600FD6165 /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				DE808EE921A050C000FD6165 /* View */,
+			);
+			path = Offer;
+			sourceTree = "<group>";
+		};
+		DE808EE921A050C000FD6165 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE808EEA21A050CA00FD6165 /* OfferFeedCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +347,7 @@
 				54EFFF8F21A00BD90074FFCB /* ViewController.swift in Sources */,
 				DE1FFC4721A04DF300C696AD /* Layoutable+PinLayout.swift in Sources */,
 				DE1FFC4C21A04DF300C696AD /* UIView+PinLayout.swift in Sources */,
+				DE808EEB21A050CA00FD6165 /* OfferFeedCell.swift in Sources */,
 				DE1FFC4A21A04DF300C696AD /* Types+Description.swift in Sources */,
 				54EFFFAE21A0460A0074FFCB /* UItableViewExtension.swift in Sources */,
 				DE1FFC3E21A04DF300C696AD /* TypesImpl.swift in Sources */,
