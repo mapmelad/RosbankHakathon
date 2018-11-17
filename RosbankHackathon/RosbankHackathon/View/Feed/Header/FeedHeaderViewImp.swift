@@ -181,6 +181,7 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
         let collection = UICollectionView(scrollDirection: .horizontal)
         let layout = collection.flowLayout!
         layout.itemSize = CGSize(width: 64, height: 64)
+        layout.minimumLineSpacing = 5
 
         collection.backgroundColor = .clear
         collection.showsHorizontalScrollIndicator = false

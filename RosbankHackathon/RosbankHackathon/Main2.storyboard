@@ -175,24 +175,14 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qr5-ma-1CZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lnI-Tu-RtY">
                                     <size key="itemSize" width="371" height="523"/>
                                     <size key="headerReferenceSize" width="50" height="177"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OfferFeedCell" id="77P-Vc-kId" customClass="OfferFeedCell" customModule="RosbankHackathon" customModuleProvider="target">
-                                        <rect key="frame" x="2" y="177" width="371" height="523"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="371" height="523"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                        <color key="backgroundColor" red="0.97647058819999999" green="0.28235294119999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gsx-JZ-Ibr" customClass="FeedHeaderViewImp" customModule="RosbankHackathon" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="177"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -219,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVA-nE-iSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3232.8000000000002" y="68.815592203898049"/>
+            <point key="canvasLocation" x="3684" y="69"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Oh6-Bb-fRM">
@@ -336,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbB-bU-rqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4092" y="80.50974512743629"/>
+            <point key="canvasLocation" x="4444" y="81"/>
         </scene>
         <!--User Search Controller-->
         <scene sceneID="uup-co-f0L">
@@ -536,17 +526,18 @@
                     <connections>
                         <segue destination="9Jo-Ns-K9p" kind="relationship" relationship="viewControllers" id="huq-c4-h68"/>
                         <segue destination="Jzl-qW-LEk" kind="relationship" relationship="viewControllers" id="MwI-sQ-mxt"/>
+                        <segue destination="9Vy-0G-fr1" kind="relationship" relationship="viewControllers" id="Wq0-g5-MGE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhS-0X-rZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1805.5999999999999" y="-702.09895052473769"/>
         </scene>
-        <!--Item-->
+        <!--Запросы-->
         <scene sceneID="T3t-b3-fGe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="9Jo-Ns-K9p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="frx-Y0-KK2"/>
+                    <tabBarItem key="tabBarItem" title="Запросы" id="frx-Y0-KK2"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ur1-UK-JaV">
@@ -561,11 +552,11 @@
             </objects>
             <point key="canvasLocation" x="2744.8000000000002" y="-702.09895052473769"/>
         </scene>
-        <!--Item-->
+        <!--Предложения-->
         <scene sceneID="YxR-4h-X3l">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Jzl-qW-LEk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Tc9-pG-H1V"/>
+                    <tabBarItem key="tabBarItem" title="Предложения" id="Tc9-pG-H1V"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LGG-Iw-Xfg">
@@ -578,10 +569,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XzC-XH-YPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2293.5999999999999" y="68.815592203898049"/>
+            <point key="canvasLocation" x="2745" y="69"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="FcD-NT-gHY">
+            <objects>
+                <viewController id="9Vy-0G-fr1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nrl-qz-WTB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WkH-k1-75w"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" id="Ckc-91-WDN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncc-I4-l3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2745" y="786"/>
         </scene>
     </scenes>
     <resources>
-        <image name="icnStar" width="32" height="32"/>
+        <image name="icnStar" width="25.600000381469727" height="25.600000381469727"/>
     </resources>
 </document>
