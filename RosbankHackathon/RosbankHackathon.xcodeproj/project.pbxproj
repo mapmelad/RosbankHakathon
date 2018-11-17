@@ -73,6 +73,9 @@
 		DE1FFC5821A04F8C00C696AD /* UICollectionVIew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC5721A04F8C00C696AD /* UICollectionVIew+Extensions.swift */; };
 		DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DAE5121A0213E0012040B /* UserSearchController.swift */; };
 		DE808EEB21A050CA00FD6165 /* OfferFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE808EEA21A050CA00FD6165 /* OfferFeedCell.swift */; };
+		DE90488D21A07D4800718F8C /* FeedService+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90488C21A07D4800718F8C /* FeedService+Type.swift */; };
+		DE90488F21A07D7200718F8C /* FeedOfferGeneralizeSearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90488E21A07D7200718F8C /* FeedOfferGeneralizeSearchDataProvider.swift */; };
+		DE90489221A08C5600718F8C /* FeedOfferGeneralizeSearchCellDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90489121A08C5600718F8C /* FeedOfferGeneralizeSearchCellDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +148,9 @@
 		DE1FFC5721A04F8C00C696AD /* UICollectionVIew+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionVIew+Extensions.swift"; sourceTree = "<group>"; };
 		DE6DAE5121A0213E0012040B /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 		DE808EEA21A050CA00FD6165 /* OfferFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferFeedCell.swift; sourceTree = "<group>"; };
+		DE90488C21A07D4800718F8C /* FeedService+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedService+Type.swift"; sourceTree = "<group>"; };
+		DE90488E21A07D7200718F8C /* FeedOfferGeneralizeSearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedOfferGeneralizeSearchDataProvider.swift; sourceTree = "<group>"; };
+		DE90489121A08C5600718F8C /* FeedOfferGeneralizeSearchCellDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedOfferGeneralizeSearchCellDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,7 +308,7 @@
 		DE10C8CF21A069050080848E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				DE10C8D021A0691C0080848E /* FeedStoriesDataProvider.swift */,
+				DE90488B21A07D4000718F8C /* Feed */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -433,6 +439,25 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		DE90488B21A07D4000718F8C /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				DE90489021A08C4700718F8C /* Search */,
+				DE90488C21A07D4800718F8C /* FeedService+Type.swift */,
+				DE10C8D021A0691C0080848E /* FeedStoriesDataProvider.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		DE90489021A08C4700718F8C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DE90488E21A07D7200718F8C /* FeedOfferGeneralizeSearchDataProvider.swift */,
+				DE90489121A08C5600718F8C /* FeedOfferGeneralizeSearchCellDataProvider.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -551,6 +576,7 @@
 				DE808EEB21A050CA00FD6165 /* OfferFeedCell.swift in Sources */,
 				DE1FFC4A21A04DF300C696AD /* Types+Description.swift in Sources */,
 				5431C68A21A0666700611034 /* CosmosTouchTarget.swift in Sources */,
+				DE90488F21A07D7200718F8C /* FeedOfferGeneralizeSearchDataProvider.swift in Sources */,
 				54EFFFBC21A059950074FFCB /* UIColorExtension.swift in Sources */,
 				54EFFFB821A04DA50074FFCB /* RequestsCollectionViewCell.swift in Sources */,
 				5431C68921A0666700611034 /* CosmosSettings.swift in Sources */,
@@ -559,9 +585,11 @@
 				DE10C8C921A062530080848E /* FeedHeaderView.swift in Sources */,
 				5431C68421A0666700611034 /* CosmosLayers.swift in Sources */,
 				DE1FFC4221A04DF300C696AD /* Coordinates.swift in Sources */,
+				DE90489221A08C5600718F8C /* FeedOfferGeneralizeSearchCellDataProvider.swift in Sources */,
 				5431C66421A0600B00611034 /* AwardCollectionViewCell.swift in Sources */,
 				DE1FFC5221A04DF300C696AD /* PinLayout+Size.swift in Sources */,
 				5431C67E21A0666700611034 /* StarFillMode.swift in Sources */,
+				DE90488D21A07D4800718F8C /* FeedService+Type.swift in Sources */,
 				DE1FFC4121A04DF300C696AD /* Percent.swift in Sources */,
 				DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */,
 				DE1FFC4E21A04DF300C696AD /* PEdgeInsets+Operators.swift in Sources */,
