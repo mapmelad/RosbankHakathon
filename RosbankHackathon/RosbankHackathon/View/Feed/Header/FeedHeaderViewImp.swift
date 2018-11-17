@@ -13,6 +13,10 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
 
     var onTextEnetered: ((String) -> Void)?
 
+    // MARK: - Members
+
+    private weak var dataProvider: CollectionViewDataProvider?
+
     // MARK: - Views
 
     private let titleLabel: UILabel = {
@@ -37,13 +41,20 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
         let layout = collection.flowLayout!
         layout.itemSize = CGSize(width: 64, height: 64)
 
+        collection.backgroundColor = .clear
+        collection.showsHorizontalScrollIndicator = false
+
+        collection.contentInset.left = 14
+        collection.contentInset.right = collection.contentInset.left
+
         return collection
     }()
 
     // Methods
 
-    func setup(with title: String) {
+    func setup(with title: String, collectionViewDataProvider: CollectionViewDataProvider) {
         titleLabel.text = title
+        setupDataProvider(collectionViewDataProvider)
     }
 
     // MARK: - Init
@@ -59,10 +70,21 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
     }
 
     func internalInit() {
-        addSubviews(titleLabel, searchBar,
-                    storyCollection)
+        addSubviews(titleLabel, searchBar, storyCollection)
+        setupCollectionView()
+    }
 
-        backgroundColor = .yellow
+    private func setupCollectionView() {
+        storyCollection.register(FeedStoryCell.self)
+    }
+
+    private func setupDataProvider(_ provider: CollectionViewDataProvider) {
+        dataProvider = provider
+
+        storyCollection.dataSource = provider
+        storyCollection.delegate = provider
+
+        storyCollection.reloadData()
     }
 
     // MARK: - Layout

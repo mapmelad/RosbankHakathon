@@ -13,5 +13,5 @@ protocol HeaderViewOutput: class {
 }
 
 protocol HeaderView: HeaderViewOutput {
-    func setup(with title: String)
+    func setup(with title: String, collectionViewDataProvider: CollectionViewDataProvider)
 }

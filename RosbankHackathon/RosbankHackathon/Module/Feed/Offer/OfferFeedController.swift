@@ -14,6 +14,14 @@ final class OfferFeedController: UIViewController {
     @IBOutlet
     private var feedCollection: UICollectionView!
 
+    // MARK: - Members
+
+    private let storiesProvider: FeedStoriesDataProvider = {
+        let provider = FeedStoriesDataProvider()
+
+        return provider
+    }()
+
     // MARK: - Overrides
 
     override func viewDidLoad() {
@@ -47,13 +55,13 @@ extension OfferFeedController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 200)
+        return CGSize(width: collectionView.frame.width, height: 208)
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
             let header: FeedHeaderViewImp = collectionView.dequeueReusableView(of: .header, at: indexPath)
-            header.backgroundColor = .blue
+            header.setup(with: "Title", collectionViewDataProvider: storiesProvider)
 
             return header
         }
