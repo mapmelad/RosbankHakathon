@@ -26,14 +26,20 @@ final class OfferFeedController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupCollectionView()
     }
 
     // MARK: - Methods
 
     private func setupCollectionView() {
+        registerCells()
         feedCollection.register(FeedHeaderViewImp.self, forSupplementaryViewOfKind: .header)
+    }
+    
+    private func registerCells() {
+        let ticketsCell = UINib(nibName: "OfferCollectionViewCell", bundle: nil)
+        feedCollection.register(ticketsCell, forCellWithReuseIdentifier: "OfferCollectionViewCell")
     }
 }
 
@@ -47,9 +53,13 @@ extension OfferFeedController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 16
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 160)
+    }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: OfferFeedCell = collectionView.dequeueReusableCell(at: indexPath)
+        let cell: OfferCollectionViewCell = collectionView.dequeueReusableCell(at: indexPath)
 
         return cell
     }
@@ -61,7 +71,7 @@ extension OfferFeedController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
             let header: FeedHeaderViewImp = collectionView.dequeueReusableView(of: .header, at: indexPath)
-            header.setup(with: "Title", collectionViewDataProvider: storiesProvider)
+            header.setup(with: "Предложения", collectionViewDataProvider: storiesProvider)
 
             return header
         }
