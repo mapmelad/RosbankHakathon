@@ -247,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				DE10C8CA21A068BD0080848E /* Feed */,
-				DE10C8C721A0624B0080848E /* FeedHeaderView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,13 +258,6 @@
 				54EFFFB721A04DA50074FFCB /* RequestsCollectionViewCell.xib */,
 			);
 			path = Requests;
-			sourceTree = "<group>";
-		};
-		DE10C8C721A0624B0080848E /* FeedHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FeedHeaderView;
 			sourceTree = "<group>";
 		};
 		DE10C8CA21A068BD0080848E /* Feed */ = {
