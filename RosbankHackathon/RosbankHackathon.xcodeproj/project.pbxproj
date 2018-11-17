@@ -13,6 +13,7 @@
 		54EFFF9421A00BDA0074FFCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9321A00BDA0074FFCB /* Assets.xcassets */; };
 		54EFFF9721A00BDA0074FFCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9521A00BDA0074FFCB /* LaunchScreen.storyboard */; };
 		54EFFF9F21A018DC0074FFCB /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9E21A018DC0074FFCB /* Main2.storyboard */; };
+		DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DAE5121A0213E0012040B /* UserSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		54EFFF9621A00BDA0074FFCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54EFFF9821A00BDA0074FFCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54EFFF9E21A018DC0074FFCB /* Main2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
+		DE6DAE5121A0213E0012040B /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		54EFFF8B21A00BD90074FFCB /* RosbankHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				DE6DAE5021A020680012040B /* Module */,
 				54EFFF8C21A00BD90074FFCB /* AppDelegate.swift */,
 				54EFFF8E21A00BD90074FFCB /* ViewController.swift */,
 				54EFFF9021A00BD90074FFCB /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				54EFFF9821A00BDA0074FFCB /* Info.plist */,
 			);
 			path = RosbankHackathon;
+			sourceTree = "<group>";
+		};
+		DE6DAE5021A020680012040B /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				DE6DAE5121A0213E0012040B /* UserSearchController.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54EFFF8F21A00BD90074FFCB /* ViewController.swift in Sources */,
+				DE6DAE5221A0213E0012040B /* UserSearchController.swift in Sources */,
 				54EFFF8D21A00BD90074FFCB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,8 +299,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W2H48J22L4;
+				DEVELOPMENT_TEAM = VD97XKT54M;
 				INFOPLIST_FILE = RosbankHackathon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,8 +318,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W2H48J22L4;
+				DEVELOPMENT_TEAM = VD97XKT54M;
 				INFOPLIST_FILE = RosbankHackathon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
