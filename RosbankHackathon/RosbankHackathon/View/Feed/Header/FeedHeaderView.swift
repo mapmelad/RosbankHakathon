@@ -10,10 +10,11 @@ import UIKit
 
 protocol HeaderViewOutput: class {
     var onTextEnetered: ((String) -> Void)? { get set }
+    var onStoryTap: VoidBlock? { get set }
 }
 
 protocol HeaderView: HeaderViewOutput {
-    func setup(with title: String, collectionViewDataProvider: CollectionViewDataProvider)
+    func setup(with title: String, collectionViewDataProvider: (CollectionViewDataProvider & FeedStoryCellOutput))
 
     var generalizeSearchView: UIView? { get set }
 }

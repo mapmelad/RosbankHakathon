@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol Layoutablej: class {
-    func layout()
-}
-
 final class FeedHeaderGeneralizeSearchViewCell: UICollectionViewCell {
     // MARK: - Outlets
 
@@ -131,6 +127,8 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
 
     var onTextEnetered: ((String) -> Void)?
 
+    var onStoryTap: VoidBlock?
+
     // MARK: - Members
 
     var generalizeSearchView: UIView? {
@@ -139,7 +137,7 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
         }
     }
 
-    private weak var dataProvider: CollectionViewDataProvider?
+    private weak var dataProvider: (CollectionViewDataProvider & FeedStoryCellOutput)?
 
     // MARK: - Views
 
@@ -203,7 +201,7 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
 
     // Methods
 
-    func setup(with title: String, collectionViewDataProvider: CollectionViewDataProvider) {
+    func setup(with title: String, collectionViewDataProvider: (CollectionViewDataProvider & FeedStoryCellOutput)) {
         titleLabel.text = title
         setupDataProvider(collectionViewDataProvider)
     }
@@ -238,8 +236,11 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
         storyCollection.register(FeedStoryCell.self)
     }
 
-    private func setupDataProvider(_ provider: CollectionViewDataProvider) {
+    private func setupDataProvider(_ provider: (CollectionViewDataProvider & FeedStoryCellOutput)) {
         dataProvider = provider
+        provider.onTap = { [weak self] in
+            self?.onStoryTap?()
+        }
 
         storyCollection.dataSource = provider
         storyCollection.delegate = provider
