@@ -22,6 +22,19 @@ final class RequestsFeedViewController: UIViewController {
         return provider
     }()
 
+    private let searchProvider: FeedOfferGeneralizeSearchDataProvider = {
+        let cellDataProvider = GeneralizeSearchCellDataProviderImp()
+        let provider = FeedOfferGeneralizeSearchDataProvider(cellDataProvider: cellDataProvider)
+
+        return provider
+    }()
+
+    private lazy var searchViewAccessory: UIView = {
+        let view = FeedHeaderGeneralizeSearchView(with: searchProvider)
+
+        return view
+    }()
+
     // MARK: - Overrides
 
     override func viewDidLoad() {
@@ -67,6 +80,9 @@ extension RequestsFeedViewController: UICollectionViewDelegate, UICollectionView
         if kind == UICollectionView.elementKindSectionHeader {
             let header: FeedHeaderViewImp = collectionView.dequeueReusableView(of: .header, at: indexPath)
             header.setup(with: "Запросы", collectionViewDataProvider: storiesProvider)
+
+            searchViewAccessory.frame.size = CGSize(width: collectionView.frame.width, height: 56)
+            header.generalizeSearchView = searchViewAccessory
 
             return header
         }
