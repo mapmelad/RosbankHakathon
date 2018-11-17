@@ -51,6 +51,10 @@ final class RequestsFeedViewController: UIViewController {
         let ticketsCell = UINib(nibName: "RequestsCollectionViewCell", bundle: nil)
         requestCollection.register(ticketsCell, forCellWithReuseIdentifier: "RequestsCollectionViewCell")
     }
+
+    private func onStoryTap() {
+        print("tapped")
+    }
 }
 
 extension RequestsFeedViewController: UICollectionViewDataSource {
@@ -83,6 +87,9 @@ extension RequestsFeedViewController: UICollectionViewDelegate, UICollectionView
 
             searchViewAccessory.frame.size = CGSize(width: collectionView.frame.width, height: 56)
             header.generalizeSearchView = searchViewAccessory
+            header.onStoryTap = { [weak self] in
+                self?.onStoryTap()
+            }
 
             return header
         }

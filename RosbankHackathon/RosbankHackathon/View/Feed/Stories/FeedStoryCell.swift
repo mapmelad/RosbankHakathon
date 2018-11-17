@@ -8,7 +8,17 @@
 
 import UIKit
 
-final class FeedStoryCell: UICollectionViewCell {
+typealias VoidBlock = () -> Void
+
+protocol FeedStoryCellOutput: class {
+    var onTap: VoidBlock? { get set }
+}
+
+final class FeedStoryCell: UICollectionViewCell, FeedStoryCellOutput {
+    // MARK: - Output
+
+    var onTap: VoidBlock?
+
     // MARK: - Init
 
     override init(frame: CGRect) {
@@ -24,6 +34,16 @@ final class FeedStoryCell: UICollectionViewCell {
     private func internalInit() {
         layer.borderWidth = 4
         layer.borderColor = UIColor.blue.cgColor
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        contentView.addGestureRecognizer(tap)
+    }
+
+    // MARK: - Actions
+
+    @objc
+    private func handleTap() {
+        onTap?()
     }
 
     // MARK: - Layout
