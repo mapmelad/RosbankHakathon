@@ -28,6 +28,8 @@
 		5431C68D21A0666700611034 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431C67D21A0666700611034 /* CosmosView.swift */; };
 		5431C69021A078F300611034 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431C68E21A078F300611034 /* OfferCollectionViewCell.swift */; };
 		5431C69121A078F300611034 /* OfferCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5431C68F21A078F300611034 /* OfferCollectionViewCell.xib */; };
+		5431C69721A0A0E600611034 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431C69521A0A0E600611034 /* StoriesCollectionViewCell.swift */; };
+		5431C69821A0A0E600611034 /* StoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5431C69621A0A0E600611034 /* StoriesCollectionViewCell.xib */; };
 		54EFFF8D21A00BD90074FFCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFF8C21A00BD90074FFCB /* AppDelegate.swift */; };
 		54EFFF8F21A00BD90074FFCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFF8E21A00BD90074FFCB /* ViewController.swift */; };
 		54EFFF9221A00BD90074FFCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9021A00BD90074FFCB /* Main.storyboard */; };
@@ -101,6 +103,8 @@
 		5431C67D21A0666700611034 /* CosmosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosView.swift; sourceTree = "<group>"; };
 		5431C68E21A078F300611034 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 		5431C68F21A078F300611034 /* OfferCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCollectionViewCell.xib; sourceTree = "<group>"; };
+		5431C69521A0A0E600611034 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		5431C69621A0A0E600611034 /* StoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		54EFFF8921A00BD90074FFCB /* RosbankHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosbankHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EFFF8C21A00BD90074FFCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54EFFF8E21A00BD90074FFCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +226,27 @@
 			path = OfferCell;
 			sourceTree = "<group>";
 		};
+		5431C69321A0A0AA00611034 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5431C69421A0A0CB00611034 /* StoriesCell */,
+				54EFFFBA21A04DB00074FFCB /* RequestsCell */,
+				5431C69221A078F900611034 /* OfferCell */,
+				5431C66121A05FE600611034 /* AwardCell */,
+				5431C66621A062C100611034 /* AwardStarsCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5431C69421A0A0CB00611034 /* StoriesCell */ = {
+			isa = PBXGroup;
+			children = (
+				5431C69521A0A0E600611034 /* StoriesCollectionViewCell.swift */,
+				5431C69621A0A0E600611034 /* StoriesCollectionViewCell.xib */,
+			);
+			path = StoriesCell;
+			sourceTree = "<group>";
+		};
 		54EFFF8021A00BD90074FFCB = {
 			isa = PBXGroup;
 			children = (
@@ -250,10 +275,7 @@
 				54EFFF8E21A00BD90074FFCB /* ViewController.swift */,
 				54EFFF9021A00BD90074FFCB /* Main.storyboard */,
 				54EFFF9E21A018DC0074FFCB /* Main2.storyboard */,
-				5431C66621A062C100611034 /* AwardStarsCell */,
-				5431C66121A05FE600611034 /* AwardCell */,
-				5431C69221A078F900611034 /* OfferCell */,
-				54EFFFBA21A04DB00074FFCB /* RequestsCell */,
+				5431C69321A0A0AA00611034 /* Cell */,
 				54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */,
 				54EFFF9321A00BDA0074FFCB /* Assets.xcassets */,
 				54EFFF9521A00BDA0074FFCB /* LaunchScreen.storyboard */,
@@ -516,6 +538,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5431C69821A0A0E600611034 /* StoriesCollectionViewCell.xib in Resources */,
 				54EFFF9721A00BDA0074FFCB /* LaunchScreen.storyboard in Resources */,
 				54EFFFB021A0473D0074FFCB /* MainHeaderView.xib in Resources */,
 				5431C69121A078F300611034 /* OfferCollectionViewCell.xib in Resources */,
@@ -575,6 +598,7 @@
 				DE1FFC4C21A04DF300C696AD /* UIView+PinLayout.swift in Sources */,
 				DE808EEB21A050CA00FD6165 /* OfferFeedCell.swift in Sources */,
 				DE1FFC4A21A04DF300C696AD /* Types+Description.swift in Sources */,
+				5431C69721A0A0E600611034 /* StoriesCollectionViewCell.swift in Sources */,
 				5431C68A21A0666700611034 /* CosmosTouchTarget.swift in Sources */,
 				DE90488F21A07D7200718F8C /* FeedOfferGeneralizeSearchDataProvider.swift in Sources */,
 				54EFFFBC21A059950074FFCB /* UIColorExtension.swift in Sources */,
