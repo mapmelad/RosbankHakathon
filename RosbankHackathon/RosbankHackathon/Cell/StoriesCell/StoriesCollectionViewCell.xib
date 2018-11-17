@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1Z-ve-8wJ">
                         <rect key="frame" x="0.0" y="0.0" width="297" height="525"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KG8-Gw-iux">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-circular-outline" translatesAutoresizingMaskIntoConstraints="NO" id="KG8-Gw-iux">
                                 <rect key="frame" x="0.0" y="0.0" width="297" height="525"/>
                             </imageView>
                         </subviews>
@@ -47,4 +47,7 @@
             <point key="canvasLocation" x="120.8" y="76.011994002998506"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="clock-circular-outline" width="102.40000152587891" height="102.40000152587891"/>
+    </resources>
 </document>

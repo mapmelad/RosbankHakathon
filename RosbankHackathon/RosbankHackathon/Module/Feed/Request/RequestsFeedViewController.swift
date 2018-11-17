@@ -53,7 +53,9 @@ final class RequestsFeedViewController: UIViewController {
     }
 
     private func onStoryTap() {
-        print("tapped")
+        let main = UIStoryboard.init(name: "Main2", bundle: nil)
+        let vc: StoriesViewController = main.instantiateViewController()
+        present(vc, animated: true)
     }
 }
 
