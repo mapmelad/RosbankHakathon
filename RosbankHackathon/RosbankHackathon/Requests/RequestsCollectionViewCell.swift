@@ -10,13 +10,17 @@ import UIKit
 
 class RequestsCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet var imageView: UIView!
     @IBOutlet var dealsImage: UIImageView!
-    @IBOutlet var timeImage: NSLayoutConstraint!
+    @IBOutlet var timeImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        dealsImage.tintColor = UIColor.hex(0x999999)
+        timeImage.tintColor = UIColor.hex(0x434343)
+        dealsImage.tintColor = UIColor.hex(0x434343)
+        imageView.backgroundColor = UIColor.hex(0xE2751B)
+        imageView.layer.cornerRadius = 21
     }
 
 }
