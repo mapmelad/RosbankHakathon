@@ -9,30 +9,25 @@
 import UIKit
 
 class RequestsFeedViewController: UIViewController {
-    
-    @IBOutlet var headerView: MainHeaderView!
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-         //headerView.setup(with: "Запросы")
-        //Not work
+        // headerView.setup(with: "Запросы")
+        // Not work
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
 
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
 }

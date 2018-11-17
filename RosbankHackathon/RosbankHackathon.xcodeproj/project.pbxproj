@@ -15,8 +15,12 @@
 		54EFFF9F21A018DC0074FFCB /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFF9E21A018DC0074FFCB /* Main2.storyboard */; };
 		54EFFFAE21A0460A0074FFCB /* UItableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFAD21A0460A0074FFCB /* UItableViewExtension.swift */; };
 		54EFFFB021A0473D0074FFCB /* MainHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */; };
-		54EFFFB321A047940074FFCB /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFB221A047940074FFCB /* MainHeaderView.swift */; };
+		54EFFFB321A047940074FFCB /* FeedHeaderViewImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFB221A047940074FFCB /* FeedHeaderViewImp.swift */; };
 		54EFFFB521A04B240074FFCB /* RequestsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFFFB421A04B240074FFCB /* RequestsFeedViewController.swift */; };
+		DE10C8C221A05CFF0080848E /* OfferFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C8C121A05CFF0080848E /* OfferFeedController.swift */; };
+		DE10C8C421A05D720080848E /* Cell+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C8C321A05D720080848E /* Cell+Reuse.swift */; };
+		DE10C8C621A05DBD0080848E /* OfferFeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C8C521A05DBD0080848E /* OfferFeedHeaderView.swift */; };
+		DE10C8C921A062530080848E /* FeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C8C821A062530080848E /* FeedHeaderView.swift */; };
 		DE1FFC3C21A04DF300C696AD /* PinLayout+Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2421A04DF200C696AD /* PinLayout+Warning.swift */; };
 		DE1FFC3D21A04DF300C696AD /* PinSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2521A04DF200C696AD /* PinSafeArea.swift */; };
 		DE1FFC3E21A04DF300C696AD /* TypesImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1FFC2621A04DF200C696AD /* TypesImpl.swift */; };
@@ -56,8 +60,12 @@
 		54EFFF9E21A018DC0074FFCB /* Main2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
 		54EFFFAD21A0460A0074FFCB /* UItableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UItableViewExtension.swift; sourceTree = "<group>"; };
 		54EFFFAF21A0473D0074FFCB /* MainHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainHeaderView.xib; sourceTree = "<group>"; };
-		54EFFFB221A047940074FFCB /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
+		54EFFFB221A047940074FFCB /* FeedHeaderViewImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderViewImp.swift; sourceTree = "<group>"; };
 		54EFFFB421A04B240074FFCB /* RequestsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsFeedViewController.swift; sourceTree = "<group>"; };
+		DE10C8C121A05CFF0080848E /* OfferFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferFeedController.swift; sourceTree = "<group>"; };
+		DE10C8C321A05D720080848E /* Cell+Reuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cell+Reuse.swift"; sourceTree = "<group>"; };
+		DE10C8C521A05DBD0080848E /* OfferFeedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferFeedHeaderView.swift; sourceTree = "<group>"; };
+		DE10C8C821A062530080848E /* FeedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderView.swift; sourceTree = "<group>"; };
 		DE1FFC2421A04DF200C696AD /* PinLayout+Warning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PinLayout+Warning.swift"; sourceTree = "<group>"; };
 		DE1FFC2521A04DF200C696AD /* PinSafeArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinSafeArea.swift; sourceTree = "<group>"; };
 		DE1FFC2621A04DF200C696AD /* TypesImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesImpl.swift; sourceTree = "<group>"; };
@@ -136,9 +144,18 @@
 		54EFFFB121A047770074FFCB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				54EFFFB221A047940074FFCB /* MainHeaderView.swift */,
+				DE10C8C721A0624B0080848E /* FeedHeaderView */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DE10C8C721A0624B0080848E /* FeedHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				DE10C8C821A062530080848E /* FeedHeaderView.swift */,
+				54EFFFB221A047940074FFCB /* FeedHeaderViewImp.swift */,
+			);
+			path = FeedHeaderView;
 			sourceTree = "<group>";
 		};
 		DE1FFC2021A04DB300C696AD /* support */ = {
@@ -213,6 +230,7 @@
 		DE1FFC5421A04EBF00C696AD /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				DE10C8C321A05D720080848E /* Cell+Reuse.swift */,
 				DE1FFC5721A04F8C00C696AD /* UICollectionVIew+Extensions.swift */,
 				DE1FFC5521A04ECC00C696AD /* UIView+Extension.swift */,
 			);
@@ -241,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				DE808EE921A050C000FD6165 /* View */,
+				DE10C8C121A05CFF0080848E /* OfferFeedController.swift */,
 			);
 			path = Offer;
 			sourceTree = "<group>";
@@ -249,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				DE808EEA21A050CA00FD6165 /* OfferFeedCell.swift */,
+				DE10C8C521A05DBD0080848E /* OfferFeedHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,20 +346,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE10C8C621A05DBD0080848E /* OfferFeedHeaderView.swift in Sources */,
 				DE1FFC5821A04F8C00C696AD /* UICollectionVIew+Extensions.swift in Sources */,
 				54EFFFB521A04B240074FFCB /* RequestsFeedViewController.swift in Sources */,
 				DE1FFC5621A04ECC00C696AD /* UIView+Extension.swift in Sources */,
 				DE1FFC4B21A04DF300C696AD /* PinLayout.swift in Sources */,
 				DE1FFC4621A04DF300C696AD /* Pin.swift in Sources */,
 				DE1FFC4421A04DF300C696AD /* PinLayout+WrapContent.swift in Sources */,
+				DE10C8C221A05CFF0080848E /* OfferFeedController.swift in Sources */,
 				DE1FFC4921A04DF300C696AD /* Types.swift in Sources */,
 				DE1FFC4521A04DF300C696AD /* SizeCalculable.swift in Sources */,
 				DE1FFC3C21A04DF300C696AD /* PinLayout+Warning.swift in Sources */,
 				DE1FFC4321A04DF300C696AD /* PinLayout+Between.swift in Sources */,
 				DE1FFC5121A04DF300C696AD /* Layoutable.swift in Sources */,
-				54EFFFB321A047940074FFCB /* MainHeaderView.swift in Sources */,
+				54EFFFB321A047940074FFCB /* FeedHeaderViewImp.swift in Sources */,
 				DE1FFC4021A04DF300C696AD /* PinLayout+Layouting.swift in Sources */,
 				DE1FFC5021A04DF300C696AD /* PinLayout+Relative.swift in Sources */,
+				DE10C8C421A05D720080848E /* Cell+Reuse.swift in Sources */,
 				DE1FFC4F21A04DF300C696AD /* CALayer+PinLayout.swift in Sources */,
 				DE1FFC3F21A04DF300C696AD /* PinLayout+Coordinates.swift in Sources */,
 				DE1FFC4821A04DF300C696AD /* Filters.swift in Sources */,
@@ -351,6 +374,7 @@
 				DE1FFC4A21A04DF300C696AD /* Types+Description.swift in Sources */,
 				54EFFFAE21A0460A0074FFCB /* UItableViewExtension.swift in Sources */,
 				DE1FFC3E21A04DF300C696AD /* TypesImpl.swift in Sources */,
+				DE10C8C921A062530080848E /* FeedHeaderView.swift in Sources */,
 				DE1FFC4221A04DF300C696AD /* Coordinates.swift in Sources */,
 				DE1FFC5221A04DF300C696AD /* PinLayout+Size.swift in Sources */,
 				DE1FFC4121A04DF300C696AD /* Percent.swift in Sources */,

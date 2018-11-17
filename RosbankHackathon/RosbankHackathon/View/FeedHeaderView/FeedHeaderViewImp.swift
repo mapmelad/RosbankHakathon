@@ -1,22 +1,14 @@
 //
-//  MainHeaderView.swift
+//  FeedHeaderViewImp.swift
 //  RosbankHackathon
 //
-//  Created by Semyon on 17/11/2018.
-//  Copyright © 2018 Semyon. All rights reserved.
+//  Created by Evgeniy on 17/11/2018.
+//  Copyright © 2018 Evgeniy. All rights reserved.
 //
 
 import UIKit
 
-protocol HeaderViewOutput: class {
-    var onTextEnetered: ((String) -> Void)? { get set }
-}
-
-protocol HeaderView: HeaderViewOutput {
-    func setup(with title: String)
-}
-
-final class MainHeaderView: UIView, HeaderView {
+final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
     // Output
 
     var onTextEnetered: ((String) -> Void)?
@@ -35,6 +27,7 @@ final class MainHeaderView: UIView, HeaderView {
     private lazy var searchBar: UISearchBar = {
         let bar = UISearchBar()
         bar.delegate = self
+        bar.searchBarStyle = .minimal
 
         return bar
     }()
@@ -78,10 +71,12 @@ final class MainHeaderView: UIView, HeaderView {
         super.layoutSubviews()
 
         titleLabel.pin.top(25).horizontally(15).sizeToFit(.width)
+        searchBar.pin.below(of: titleLabel).marginTop(10).horizontally(6).sizeToFit(.width)
+        storyCollection.pin.height(64).below(of: searchBar).marginTop(8).horizontally()
     }
 }
 
-extension MainHeaderView: UISearchBarDelegate {
+extension FeedHeaderViewImp: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         onTextEnetered?(searchText)
     }
