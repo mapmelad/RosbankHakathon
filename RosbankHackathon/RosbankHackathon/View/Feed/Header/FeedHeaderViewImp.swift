@@ -71,7 +71,13 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
 
     func internalInit() {
         addSubviews(titleLabel, searchBar, storyCollection)
+        setupHeader()
         setupCollectionView()
+    }
+
+    private func setupHeader() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        addGestureRecognizer(tap)
     }
 
     private func setupCollectionView() {
@@ -85,6 +91,13 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
         storyCollection.delegate = provider
 
         storyCollection.reloadData()
+    }
+
+    // MARK: - Actions
+
+    @objc
+    private func handleTap() {
+        endEditing(true)
     }
 
     // MARK: - Layout
