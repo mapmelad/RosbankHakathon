@@ -14,34 +14,26 @@ struct RequestFeedModel {
     let requestDescription: String
     let categories: [CategoryKind]!
     let achievements: [AchievementKind]!
-    let rating: Double!
-    var deadline: Date {
-        return Date(timeIntervalSince1970: TimeInterval(unixTime))
-    }
+    let rating: Int
+    let ratingColor: String
     let companyAvatarURL: String
 
     // private
 
-    private let unixTime: Int
-
-    init(name: String, confirmedDeals: Int, requestDescription: String, categories: [CategoryKind], achievements: [AchievementKind], rating: Double) {
-        self.name = name
-        self.confirmedDeals = confirmedDeals
-        self.requestDescription = requestDescription
-        self.categories = categories
-        self.achievements = achievements
-        self.rating = rating
-        self.companyAvatarURL = ""
-        unixTime = 0
+    var deadline: Date {
+        return Date(timeIntervalSince1970: TimeInterval(unixTime))
     }
+
+    private let unixTime: Int
 }
 
 extension RequestFeedModel: Decodable {
     enum CodingKeys: String, CodingKey {
-        case name
+        case name, rating
 
-        case confirmedDeals, categories, achievements, rating
+        case confirmedDeals, categories, achievements
 
+        case ratingColor = "typeReyt"
         case unixTime = "date"
         case companyAvatarURL = "logo"
         case requestDescription = "zadania"

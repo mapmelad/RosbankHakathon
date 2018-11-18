@@ -14,17 +14,28 @@ struct RequestFeedViewModel {
     let achievements: [UIImage]
     let categories: String
     let rating: String
+    let ratingColor: UIColor
     let deadline: String
 }
 
 extension RequestFeedViewModel {
     init(model: RequestFeedModel) {
+        let randomNum = Int(arc4random_uniform(11))
+
         name = model.name
         requestDescription = model.requestDescription
         achievements = RequestFeedViewModel.randomAchievements().compactMap { $0.icon }
-        categories = ""//model.categories.map { $0.stringValue }.joined(separator: ",")
+        categories = "" // model.categories.map { $0.stringValue }.joined(separator: ",")
         deadline = model.deadline.humanString
-        rating = "\(model.rating)"
+        rating = "\(model.rating).\(randomNum)"
+
+        if model.ratingColor == "yellow" {
+            ratingColor = #colorLiteral(red: 0.987544477, green: 0.6673021317, blue: 0, alpha: 1)
+        } else if model.ratingColor == "green" {
+            ratingColor = #colorLiteral(red: 0.2222073078, green: 0.6842822433, blue: 0.3299767971, alpha: 1)
+        } else {
+            ratingColor = #colorLiteral(red: 0.8886404634, green: 0.3087466955, blue: 0.2089650035, alpha: 1)
+        }
     }
 
     private static func randomAchievements() -> [AchievementKind] {
