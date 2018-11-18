@@ -16,12 +16,7 @@ final class RequestFeedDataProviderImp: RequestFeedDataProvider {
     // MARK: - Interface
 
     func get() -> [RequestFeedViewModel] {
-        let items: [RequestFeedModel] = [RequestFeedModel(name: "Some name",
-                                                          confirmedDeals: 44,
-                                                          requestDescription: "description",
-                                                          categories: [CategoryKind.none],
-                                                          achievements: [AchievementKind.dealer],
-                                                          rating: 1.2)]
+        let items: [RequestFeedModel] = []
 
         return items.map { RequestFeedViewModel(model: $0) }
     }

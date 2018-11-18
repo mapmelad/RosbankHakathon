@@ -96,6 +96,12 @@
                                     <constraint firstAttribute="width" constant="20" id="sHJ-1k-ZdY"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="рейтинг: 8.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPd-Th-1Eq">
+                                <rect key="frame" x="264.5" y="52.5" width="90.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" red="0.85098039215686272" green="0.2196078431372549" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -105,6 +111,7 @@
                             <constraint firstItem="Mq0-hA-uHg" firstAttribute="top" secondItem="y3b-4D-GmN" secondAttribute="top" constant="10" id="HBY-pX-aZW"/>
                             <constraint firstItem="Twl-eS-EDy" firstAttribute="leading" secondItem="eXO-uV-1iA" secondAttribute="trailing" constant="10" id="JHm-zV-6Rf"/>
                             <constraint firstItem="eXO-uV-1iA" firstAttribute="top" secondItem="y3b-4D-GmN" secondAttribute="top" constant="15" id="Ka1-2V-gHc"/>
+                            <constraint firstAttribute="trailing" secondItem="yPd-Th-1Eq" secondAttribute="trailing" constant="20" id="PAL-1G-9nS"/>
                             <constraint firstItem="dko-H1-t0X" firstAttribute="leading" secondItem="eXO-uV-1iA" secondAttribute="trailing" constant="10" id="Rnm-fU-cQX"/>
                             <constraint firstAttribute="bottom" secondItem="dko-H1-t0X" secondAttribute="bottom" id="SLP-aV-KoN"/>
                             <constraint firstItem="rxX-qM-gd7" firstAttribute="top" secondItem="y3b-4D-GmN" secondAttribute="top" constant="10" id="SQR-Fe-Srj"/>
@@ -117,6 +124,7 @@
                             <constraint firstItem="Twl-eS-EDy" firstAttribute="top" secondItem="rxX-qM-gd7" secondAttribute="bottom" constant="4" id="ZCL-eo-ORW"/>
                             <constraint firstItem="b3Y-s8-XCg" firstAttribute="leading" secondItem="eXO-uV-1iA" secondAttribute="trailing" constant="10" id="aUa-dp-Eac"/>
                             <constraint firstItem="rxX-qM-gd7" firstAttribute="leading" secondItem="eXO-uV-1iA" secondAttribute="trailing" constant="10" id="c9A-rD-4Bo"/>
+                            <constraint firstItem="yPd-Th-1Eq" firstAttribute="centerY" secondItem="dUM-eg-wKv" secondAttribute="centerY" id="cUr-Nd-peq"/>
                             <constraint firstItem="5GS-ot-5zn" firstAttribute="leading" secondItem="f24-sb-eC1" secondAttribute="trailing" constant="5" id="ct1-Z1-jcp"/>
                             <constraint firstAttribute="trailing" secondItem="Mq0-hA-uHg" secondAttribute="trailing" constant="20" id="gIS-K7-KdQ"/>
                             <constraint firstItem="f24-sb-eC1" firstAttribute="leading" secondItem="rxX-qM-gd7" secondAttribute="trailing" constant="5" id="j1r-Q5-xH8"/>
@@ -142,6 +150,7 @@
                 <outlet property="lastImageView" destination="Mq0-hA-uHg" id="K1Z-6M-FAZ"/>
                 <outlet property="middleImageView" destination="5GS-ot-5zn" id="P2T-Fs-y7N"/>
                 <outlet property="nameLabel" destination="rxX-qM-gd7" id="N06-Ae-klJ"/>
+                <outlet property="ratingLabel" destination="yPd-Th-1Eq" id="5P9-Yk-RHz"/>
                 <outlet property="timeImage" destination="b3Y-s8-XCg" id="Xam-J8-wi5"/>
             </connections>
             <point key="canvasLocation" x="285.60000000000002" y="81.859070464767626"/>

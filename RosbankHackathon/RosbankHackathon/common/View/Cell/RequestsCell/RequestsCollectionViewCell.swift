@@ -38,6 +38,9 @@ final class RequestsCollectionViewCell: UICollectionViewCell {
     @IBOutlet
     private var deadlineLabel: UILabel!
 
+    @IBOutlet
+    private var ratingLabel: UILabel!
+
     // MARK: - Setup
 
     override func awakeFromNib() {
@@ -59,11 +62,13 @@ final class RequestsCollectionViewCell: UICollectionViewCell {
 
         descriptionLabel.text = model.requestDescription
         deadlineLabel.text = model.deadline
+        ratingLabel.text = model.rating
+        ratingLabel.textColor = model.ratingColor
     }
 
     override var intrinsicContentSize: CGSize {
         let height: CGFloat = 65 + descriptionLabel.intrinsicContentSize.height
 
-        return CGSize.init(width: -1, height: height)
+        return CGSize(width: -1, height: height)
     }
 }
