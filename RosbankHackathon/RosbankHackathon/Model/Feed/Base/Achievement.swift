@@ -9,15 +9,12 @@
 import UIKit
 
 enum AchievementKind {
-    case none
     case dealer
     case king
     case lightning
 
     var icon: UIImage? {
         switch self {
-        case .none:
-            return nil
         case .dealer:
             return UIImage(named: "hand-shake")
         case .king:
@@ -25,5 +22,11 @@ enum AchievementKind {
         case .lightning:
             return UIImage(named: "light")
         }
+    }
+}
+
+extension AchievementKind: Decodable {
+    init(from decoder: Decoder) throws {
+        throw AnyError()
     }
 }
