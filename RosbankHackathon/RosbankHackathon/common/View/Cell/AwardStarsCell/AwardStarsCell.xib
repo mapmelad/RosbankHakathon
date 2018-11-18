@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AwardStarsCell" customModule="RosbankHackathon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6V-Ch-oNa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сделка с OOO &quot;Молодые и красивые&quot; успешно проведена! 🦕" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak3-OS-ZQo">
+                                <rect key="frame" x="10" y="15" width="357" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="G8D-aG-XIM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Довольны ли вы качеством услуг? Оцените пожалуйста контрагента" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xX1-WL-9xV">
+                                <rect key="frame" x="10" y="60" width="356" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="x6W-RI-fYf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mno-jm-WnA" customClass="CosmosView" customModule="RosbankHackathon" customModuleProvider="target">
+                                <rect key="frame" x="77.5" y="106" width="220" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rhA-c7-LjN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1c-sc-7JC">
+                                <rect key="frame" x="129" y="156" width="117" height="15"/>
+                                <state key="normal" title="Оставить отзыв!"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="9Fg-Dm-Amg"/>
+                            <constraint firstItem="S1c-sc-7JC" firstAttribute="centerX" secondItem="m6V-Ch-oNa" secondAttribute="centerX" id="BBV-TS-UHo"/>
+                            <constraint firstItem="ak3-OS-ZQo" firstAttribute="top" secondItem="m6V-Ch-oNa" secondAttribute="top" constant="15" id="Hc6-8u-A6b"/>
+                            <constraint firstItem="mno-jm-WnA" firstAttribute="top" secondItem="xX1-WL-9xV" secondAttribute="bottom" constant="10" id="JBr-vo-Pyl"/>
+                            <constraint firstAttribute="bottom" secondItem="S1c-sc-7JC" secondAttribute="bottom" constant="10" id="RyW-gG-rM7"/>
+                            <constraint firstItem="ak3-OS-ZQo" firstAttribute="leading" secondItem="m6V-Ch-oNa" secondAttribute="leading" constant="10" id="aP5-Gb-rHl"/>
+                            <constraint firstAttribute="trailing" secondItem="ak3-OS-ZQo" secondAttribute="trailing" constant="8" id="cKk-Wg-fTP"/>
+                            <constraint firstAttribute="trailing" secondItem="xX1-WL-9xV" secondAttribute="trailing" constant="9" id="ng3-Dr-ahH"/>
+                            <constraint firstItem="S1c-sc-7JC" firstAttribute="top" secondItem="mno-jm-WnA" secondAttribute="bottom" constant="10" id="oiH-2F-i4w"/>
+                            <constraint firstItem="xX1-WL-9xV" firstAttribute="top" secondItem="ak3-OS-ZQo" secondAttribute="bottom" constant="5" id="sUw-cT-3ge"/>
+                            <constraint firstItem="xX1-WL-9xV" firstAttribute="leading" secondItem="m6V-Ch-oNa" secondAttribute="leading" constant="10" id="u2A-em-bXV"/>
+                            <constraint firstItem="mno-jm-WnA" firstAttribute="centerX" secondItem="m6V-Ch-oNa" secondAttribute="centerX" id="ume-FX-yMD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="m6V-Ch-oNa" secondAttribute="trailing" id="1OE-jd-uAu"/>
+                <constraint firstItem="m6V-Ch-oNa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="L5J-DZ-q0m"/>
+                <constraint firstItem="m6V-Ch-oNa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ndx-5z-5c9"/>
+                <constraint firstAttribute="bottom" secondItem="m6V-Ch-oNa" secondAttribute="bottom" id="lP0-8l-sBX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="375" height="212"/>
+            <connections>
+                <outlet property="rewiewButton" destination="S1c-sc-7JC" id="fln-e2-Gjn"/>
+                <outlet property="subTitle" destination="xX1-WL-9xV" id="ANV-KY-42v"/>
+                <outlet property="titleLabel" destination="ak3-OS-ZQo" id="G76-uH-sdL"/>
+            </connections>
+            <point key="canvasLocation" x="136.80000000000001" y="218.1409295352324"/>
+        </collectionViewCell>
+    </objects>
+</document>
