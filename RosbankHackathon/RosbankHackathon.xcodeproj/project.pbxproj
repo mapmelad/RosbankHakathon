@@ -84,6 +84,8 @@
 		DE90488D21A07D4800718F8C /* FeedService+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90488C21A07D4800718F8C /* FeedService+Type.swift */; };
 		DE90488F21A07D7200718F8C /* FeedOfferGeneralizeSearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90488E21A07D7200718F8C /* FeedOfferGeneralizeSearchDataProvider.swift */; };
 		DE90489221A08C5600718F8C /* FeedOfferGeneralizeSearchCellDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90489121A08C5600718F8C /* FeedOfferGeneralizeSearchCellDataProvider.swift */; };
+		DED303D021A17202009CAFCE /* FeedFilterOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED303CF21A17202009CAFCE /* FeedFilterOptionCell.swift */; };
+		DEEB5F6B21A1710B00D52A74 /* FeedFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB5F6A21A1710B00D52A74 /* FeedFilterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +169,8 @@
 		DE90488C21A07D4800718F8C /* FeedService+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedService+Type.swift"; sourceTree = "<group>"; };
 		DE90488E21A07D7200718F8C /* FeedOfferGeneralizeSearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedOfferGeneralizeSearchDataProvider.swift; sourceTree = "<group>"; };
 		DE90489121A08C5600718F8C /* FeedOfferGeneralizeSearchCellDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedOfferGeneralizeSearchCellDataProvider.swift; sourceTree = "<group>"; };
+		DED303CF21A17202009CAFCE /* FeedFilterOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterOptionCell.swift; sourceTree = "<group>"; };
+		DEEB5F6A21A1710B00D52A74 /* FeedFilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,6 +478,7 @@
 		DE808EE721A0509E00FD6165 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				DEEB5F6921A1710100D52A74 /* Filter */,
 				DE90488A21A06AD600718F8C /* Request */,
 				DE808EE821A050A600FD6165 /* Offer */,
 				5431C69921A0A26200611034 /* Stories */,
@@ -586,6 +591,31 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		DED303CD21A171F8009CAFCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DED303CE21A171FA009CAFCE /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DED303CE21A171FA009CAFCE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DED303CF21A17202009CAFCE /* FeedFilterOptionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DEEB5F6921A1710100D52A74 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				DED303CD21A171F8009CAFCE /* View */,
+				DEEB5F6A21A1710B00D52A74 /* FeedFilterController.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -664,6 +694,7 @@
 			files = (
 				DE10C8C621A05DBD0080848E /* OfferFeedHeaderView.swift in Sources */,
 				5431C68221A0666700611034 /* CosmosDefaultSettings.swift in Sources */,
+				DEEB5F6B21A1710B00D52A74 /* FeedFilterController.swift in Sources */,
 				DE1FFC5821A04F8C00C696AD /* UICollectionVIew+Extensions.swift in Sources */,
 				5431C68821A0666700611034 /* CosmosRating.swift in Sources */,
 				54EFFFB521A04B240074FFCB /* RequestsFeedViewController.swift in Sources */,
@@ -709,6 +740,7 @@
 				5431C69721A0A0E600611034 /* StoriesCollectionViewCell.swift in Sources */,
 				5431C68A21A0666700611034 /* CosmosTouchTarget.swift in Sources */,
 				DE90488F21A07D7200718F8C /* FeedOfferGeneralizeSearchDataProvider.swift in Sources */,
+				DED303D021A17202009CAFCE /* FeedFilterOptionCell.swift in Sources */,
 				54EFFFBC21A059950074FFCB /* UIColor+Init.swift in Sources */,
 				54EFFFB821A04DA50074FFCB /* RequestsCollectionViewCell.swift in Sources */,
 				5431C68921A0666700611034 /* CosmosSettings.swift in Sources */,

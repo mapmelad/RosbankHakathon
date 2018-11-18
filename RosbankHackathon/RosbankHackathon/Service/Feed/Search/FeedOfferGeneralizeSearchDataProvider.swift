@@ -9,6 +9,10 @@
 import UIKit
 
 final class FeedOfferGeneralizeSearchDataProvider: NSObject, CollectionViewDataProvider {
+    // MARK: - Output
+
+    var onItemSelected: ((IndexPath) -> Void)?
+
     // MARK: - Members
 
     private let cellDataProvider: GeneralizeSearchCellDataProvider
@@ -29,6 +33,10 @@ final class FeedOfferGeneralizeSearchDataProvider: NSObject, CollectionViewDataP
         let width = cellDataProvider.width(for: indexPath)
 
         return CGSize(width: width, height: 32)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onItemSelected?(indexPath)
     }
 
     // MARK: - Helpers

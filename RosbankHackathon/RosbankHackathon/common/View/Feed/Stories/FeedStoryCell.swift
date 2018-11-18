@@ -18,6 +18,7 @@ final class FeedStoryCell: UICollectionViewCell, FeedStoryCellOutput {
     private let iconView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
+        imageView.backgroundColor = #colorLiteral(red: 0.2389388382, green: 0.5892125368, blue: 0.8818323016, alpha: 1)
 
         return imageView
     }()

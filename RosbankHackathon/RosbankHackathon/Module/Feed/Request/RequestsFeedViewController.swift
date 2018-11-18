@@ -51,6 +51,9 @@ final class RequestsFeedViewController: UIViewController {
     private func setupCollectionView() {
         registerCells()
         requestCollection.register(FeedHeaderViewImp.self, forSupplementaryViewOfKind: .header)
+        searchProvider.onItemSelected = { [weak self] _ in
+            self?.onFilterTap()
+        }
     }
 
     private func registerCells() {
@@ -59,9 +62,25 @@ final class RequestsFeedViewController: UIViewController {
     }
 
     private func onStoryTap() {
-        let main = UIStoryboard.init(name: "Main2", bundle: nil)
-        let vc: StoriesViewController = main.instantiateViewController()
+        presentController(StoriesViewController.self)
+    }
+
+    private func onFilterTap() {
+        presentController(FeedFilterController.self)
+    }
+
+    private func presentController<C: Reusable>(_ c: C.Type = C.self) {
+        let main = UIStoryboard(name: "Main2", bundle: nil)
+        let vc = main.instantiateViewController(ofType: c) as! UIViewController
+
         present(vc, animated: true)
+    }
+
+    private func pushController<C: Reusable>(_ c: C.Type = C.self) {
+        let main = UIStoryboard(name: "Main2", bundle: nil)
+        let vc = main.instantiateViewController(ofType: c) as! UIViewController
+
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
