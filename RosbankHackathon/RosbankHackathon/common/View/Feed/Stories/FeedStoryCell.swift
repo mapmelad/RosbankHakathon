@@ -8,12 +8,6 @@
 
 import UIKit
 
-typealias VoidBlock = () -> Void
-
-protocol FeedStoryCellOutput: class {
-    var onTap: VoidBlock? { get set }
-}
-
 final class FeedStoryCell: UICollectionViewCell, FeedStoryCellOutput {
     // MARK: - Output
 

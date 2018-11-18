@@ -39,7 +39,7 @@ final class OfferFeedController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupCollectionView()
     }
 
@@ -49,7 +49,7 @@ final class OfferFeedController: UIViewController {
         registerCells()
         feedCollection.register(FeedHeaderViewImp.self, forSupplementaryViewOfKind: .header)
     }
-    
+
     private func registerCells() {
         let ticketsCell = UINib(nibName: "OfferCollectionViewCell", bundle: nil)
         feedCollection.register(ticketsCell, forCellWithReuseIdentifier: "OfferCollectionViewCell")
@@ -66,7 +66,7 @@ extension OfferFeedController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 16
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 160)
     }

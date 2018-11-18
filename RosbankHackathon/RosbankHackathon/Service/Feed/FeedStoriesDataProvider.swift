@@ -9,7 +9,6 @@
 import UIKit
 
 final class FeedStoriesDataProvider: NSObject, CollectionViewDataProvider, FeedStoryCellOutput {
-
     var onTap: VoidBlock?
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
