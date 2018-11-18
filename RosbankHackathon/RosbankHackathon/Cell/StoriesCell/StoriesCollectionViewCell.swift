@@ -10,7 +10,9 @@ import UIKit
 
 class StoriesCollectionViewCell: UICollectionViewCell {
 
-    
+    @IBOutlet var storiesImage: UIImageView!
+    @IBOutlet var avatarImage: UIImageView!
+    @IBOutlet var userLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

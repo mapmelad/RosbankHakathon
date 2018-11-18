@@ -63,7 +63,18 @@ extension StoriesViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: StoriesCollectionViewCell = collectionView.dequeueReusableCell(at: indexPath)
-        
+        switch indexPath.row {
+        case 0:
+            cell.storiesImage.image = UIImage(named: "tema")
+            cell.userLabel.text = "ООО \"Студия Артемия Лебедева\""
+        case 1:
+            cell.storiesImage.image = UIImage(named: "Tinkov")
+            cell.userLabel.text = "ИП \"ОЛЕГ\""
+        case 2:
+            cell.storiesImage.image = UIImage(named: "Sob")
+            cell.userLabel.text = "ООО \"Моя улица\""
+        default: cell.storiesImage.image = UIImage(named: "tema")
+        }
         return cell
     }
     

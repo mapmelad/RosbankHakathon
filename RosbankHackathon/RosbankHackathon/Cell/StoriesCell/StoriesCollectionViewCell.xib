@@ -22,16 +22,49 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1Z-ve-8wJ">
                         <rect key="frame" x="0.0" y="0.0" width="297" height="525"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-circular-outline" translatesAutoresizingMaskIntoConstraints="NO" id="KG8-Gw-iux">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tinkov" translatesAutoresizingMaskIntoConstraints="NO" id="KG8-Gw-iux">
                                 <rect key="frame" x="0.0" y="0.0" width="297" height="525"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7lu-lI-X3Z">
+                                <rect key="frame" x="0.0" y="0.0" width="297" height="60"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="cIE-wT-9t3">
+                                        <rect key="frame" x="15" y="25" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="gY7-4E-3L0"/>
+                                            <constraint firstAttribute="width" constant="20" id="xuG-9U-Dk4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Студия Артемия Лебедева" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lB-Vy-j6b">
+                                        <rect key="frame" x="45" y="24.5" width="250" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="dts-8a-5w1"/>
+                                            <constraint firstAttribute="height" constant="21" id="uvj-SP-ErT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.24550513698630136" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cIE-wT-9t3" firstAttribute="leading" secondItem="7lu-lI-X3Z" secondAttribute="leading" constant="15" id="Uy0-7U-S48"/>
+                                    <constraint firstItem="5lB-Vy-j6b" firstAttribute="centerY" secondItem="cIE-wT-9t3" secondAttribute="centerY" id="lBv-iV-zmF"/>
+                                    <constraint firstItem="5lB-Vy-j6b" firstAttribute="leading" secondItem="cIE-wT-9t3" secondAttribute="trailing" constant="10" id="qlX-9U-yjk"/>
+                                    <constraint firstItem="cIE-wT-9t3" firstAttribute="top" secondItem="7lu-lI-X3Z" secondAttribute="top" constant="25" id="uAH-3a-Qpj"/>
+                                    <constraint firstAttribute="height" constant="60" id="xjH-MN-eJI"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KG8-Gw-iux" firstAttribute="leading" secondItem="w1Z-ve-8wJ" secondAttribute="leading" id="PHG-ds-6Tt"/>
                             <constraint firstAttribute="trailing" secondItem="KG8-Gw-iux" secondAttribute="trailing" id="jaR-9P-xdU"/>
                             <constraint firstItem="KG8-Gw-iux" firstAttribute="top" secondItem="w1Z-ve-8wJ" secondAttribute="top" id="nyK-9t-2Z6"/>
+                            <constraint firstItem="7lu-lI-X3Z" firstAttribute="top" secondItem="w1Z-ve-8wJ" secondAttribute="top" id="oIE-Ne-2Qg"/>
+                            <constraint firstAttribute="trailing" secondItem="7lu-lI-X3Z" secondAttribute="trailing" id="tSB-Rk-C7B"/>
                             <constraint firstAttribute="bottom" secondItem="KG8-Gw-iux" secondAttribute="bottom" id="uhA-4s-AT4"/>
+                            <constraint firstItem="7lu-lI-X3Z" firstAttribute="leading" secondItem="w1Z-ve-8wJ" secondAttribute="leading" id="upc-jE-2lt"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -44,10 +77,16 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="297" height="525"/>
+            <connections>
+                <outlet property="avatarImage" destination="cIE-wT-9t3" id="k68-ek-mHY"/>
+                <outlet property="storiesImage" destination="KG8-Gw-iux" id="Xdg-hd-WEM"/>
+                <outlet property="userLabel" destination="5lB-Vy-j6b" id="ENH-5Y-w9L"/>
+            </connections>
             <point key="canvasLocation" x="120.8" y="76.011994002998506"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="clock-circular-outline" width="102.40000152587891" height="102.40000152587891"/>
+        <image name="Tinkov" width="381.28903198242188" height="478.40530395507812"/>
+        <image name="user" width="42.470046997070312" height="42.470046997070312"/>
     </resources>
 </document>
