@@ -30,7 +30,7 @@ final class RequestsFeedViewController: UIViewController {
     }()
 
     private let apiClient: EPAPIClient = {
-        let adapter = RequestAdapterImp(endpoint: "http://10.91.6.5:3000/")
+        let adapter = RequestAdapterImp(endpoint: "http://10.91.4.158:3000/")
         let sender = RequestSenderImp()
         let provider = ResponseProviderImp(adapter: adapter, sender: sender)
         let client = EPAPIClient(provider: provider)

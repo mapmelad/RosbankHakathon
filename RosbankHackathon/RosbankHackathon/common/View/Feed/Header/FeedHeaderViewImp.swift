@@ -40,7 +40,7 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
         let bar = UISearchBar()
         bar.delegate = self
         bar.searchBarStyle = .minimal
-
+        bar.placeholder = "Имя компании или услуги"
         return bar
     }()
 
