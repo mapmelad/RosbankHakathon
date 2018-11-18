@@ -105,9 +105,7 @@ final class FeedHeaderViewImp: UICollectionReusableView, HeaderView {
     }
 
     private func internalInit() {
-        [titleLabel, searchBar,
-         storiesTitleLabel, storiesSeeAllLabel,
-         storyCollection, separatorView].forEach(addSubview)
+        [titleLabel, searchBar, separatorView].forEach(addSubview)
 
         setupHeader()
         setupCollectionView()
