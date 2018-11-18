@@ -8,63 +8,6 @@
 
 import UIKit
 
-// ==
-
-enum CategoryKind {
-    case none
-
-    var stringValue: String {
-        switch self {
-        case .none:
-            return "none"
-        }
-    }
-}
-
-enum AchievementKind {
-    case none
-
-    var icon: UIImage? {
-        switch self {
-        case .none:
-            return nil
-        }
-    }
-}
-
-struct RequestFeedModel {
-    let name: String
-    let confirmedDeals: Int
-    let requestDescription: String
-    let categories: [CategoryKind]
-    let achievements: [AchievementKind]
-    let deadline: Date
-}
-
-struct RequestFeedViewModel {
-    let name: String
-    let requestDescription: String
-    let achievements: [UIImage]
-    let categories: String
-    let deadline: String
-}
-
-// ==
-
-final class RequestFeedDataProvider {
-    // MARK: - Interface
-
-    func get() -> [RequestFeedViewModel] {
-        let items = [RequestFeedViewModel(name: "Some name",
-                                          requestDescription: "some descr",
-                                          achievements: [],
-                                          categories: "dasda",
-                                          deadline: "25 nov.")]
-
-        return items
-    }
-}
-
 final class RequestsFeedViewController: UIViewController {
     // MARK: - Outlets
 
@@ -93,7 +36,7 @@ final class RequestsFeedViewController: UIViewController {
     }()
 
     private lazy var datasource: [RequestFeedViewModel] = {
-        let provider = RequestFeedDataProvider()
+        let provider: RequestFeedDataProvider = RequestFeedDataProviderImp()
 
         return provider.get()
     }()
