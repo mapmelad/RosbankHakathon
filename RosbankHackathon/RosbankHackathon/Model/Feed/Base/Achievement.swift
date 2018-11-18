@@ -10,11 +10,20 @@ import UIKit
 
 enum AchievementKind {
     case none
+    case dealer
+    case king
+    case lightning
 
     var icon: UIImage? {
         switch self {
         case .none:
             return nil
+        case .dealer:
+            return UIImage(named: "hand-shake")
+        case .king:
+            return UIImage(named: "crowns")
+        case .lightning:
+            return UIImage(named: "light")
         }
     }
 }

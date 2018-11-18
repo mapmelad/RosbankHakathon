@@ -14,5 +14,6 @@ struct RequestFeedModel {
     let requestDescription: String
     let categories: [CategoryKind]
     let achievements: [AchievementKind]
+    let rating: Double
     let deadline: Date
 }

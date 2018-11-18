@@ -6,7 +6,7 @@
 //  Copyright © 2018 Semyon. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol RequestFeedDataProvider: class {
     func get() -> [RequestFeedViewModel]
@@ -16,12 +16,30 @@ final class RequestFeedDataProviderImp: RequestFeedDataProvider {
     // MARK: - Interface
 
     func get() -> [RequestFeedViewModel] {
-        let items = [RequestFeedViewModel(name: "Some name",
-                                          requestDescription: "some descr",
-                                          achievements: [],
-                                          categories: "dasda",
-                                          deadline: "25 nov.")]
+        let items = [RequestFeedModel(name: "Some name",
+                                      confirmedDeals: 44,
+                                      requestDescription: "description",
+                                      categories: [.none],
+                                      achievements: [.dealer],
+                                      deadline: Date()),
 
-        return items
+                     RequestFeedModel(name: "Some name",
+                                      confirmedDeals: 44,
+                                      requestDescription: "description",
+                                      categories: [.none],
+                                      achievements: [.dealer, .lightning],
+                                      deadline: Date())]
+
+        return items.map { RequestFeedViewModel(model: $0) }
+    }
+}
+
+private extension RequestFeedViewModel {
+    init(model: RequestFeedModel) {
+        name = model.name
+        requestDescription = model.requestDescription
+        achievements = model.achievements.compactMap { $0.icon }
+        categories = model.categories.map { $0.stringValue }.joined(separator: ",")
+        deadline = model.deadline.humanString
     }
 }

@@ -13,5 +13,6 @@ struct RequestFeedViewModel {
     let requestDescription: String
     let achievements: [UIImage]
     let categories: String
+    let rating: String
     let deadline: String
 }
