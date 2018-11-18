@@ -16,7 +16,7 @@ final class FeedStoriesDataProvider: NSObject, CollectionViewDataProvider, FeedS
         cell.onTap = { [weak self] in
             self?.onTap?()
         }
-        cell.setup(with: UIImage(named: "crowns")!)
+        //cell.setup(with: UIImage(named: "crowns")!)
 
         return cell
     }
@@ -24,4 +24,6 @@ final class FeedStoriesDataProvider: NSObject, CollectionViewDataProvider, FeedS
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8
     }
+
+    // MARK: - Private
 }

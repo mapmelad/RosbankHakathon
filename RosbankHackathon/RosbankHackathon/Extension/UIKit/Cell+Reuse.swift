@@ -79,7 +79,7 @@ public extension UICollectionView {
 }
 
 public extension UIStoryboard {
-    func instantiateViewController<T: Reusable>(ofType type: T.Type = T.self) -> T {
+    func instantiateViewController<T: Reusable>(ofType type: T.Type = T.self) -> (T) {
         guard let viewController = instantiateViewController(withIdentifier: type.reuseID) as? T else {
             fatalError()
         }
