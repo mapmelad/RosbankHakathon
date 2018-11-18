@@ -16,14 +16,20 @@ final class FeedStoriesDataProvider: NSObject, CollectionViewDataProvider, FeedS
         cell.onTap = { [weak self] in
             self?.onTap?()
         }
-        //cell.setup(with: UIImage(named: "crowns")!)
+        if let image = images.item(at: indexPath.row) {
+            cell.setup(with: image)
+        }
 
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return 6
     }
 
     // MARK: - Private
+
+    private let images: [UIImage] = ["TinkovOleg", "ArtemiyLebedev",
+                                     "SergeySobyanin", "VVPutin",
+                                     "PVDurov", "magaTrump"].compactMap { UIImage(named: $0) }
 }

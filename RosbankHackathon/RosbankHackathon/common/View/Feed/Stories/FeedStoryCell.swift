@@ -18,7 +18,8 @@ final class FeedStoryCell: UICollectionViewCell, FeedStoryCellOutput {
     private let iconView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
-        imageView.backgroundColor = #colorLiteral(red: 0.2389388382, green: 0.5892125368, blue: 0.8818323016, alpha: 1)
+        imageView.contentMode = .scaleAspectFill
+        // imageView.backgroundColor = #colorLiteral(red: 0.2389388382, green: 0.5892125368, blue: 0.8818323016, alpha: 1)
 
         return imageView
     }()
@@ -27,6 +28,14 @@ final class FeedStoryCell: UICollectionViewCell, FeedStoryCellOutput {
 
     func setup(with model: UIImage) {
         iconView.image = model
+    }
+
+    // MARK: - Setup
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        iconView.image = nil
     }
 
     // MARK: - Init
@@ -45,7 +54,7 @@ final class FeedStoryCell: UICollectionViewCell, FeedStoryCellOutput {
         addSubview(iconView)
 
         iconView.layer.borderWidth = 4
-        iconView.layer.borderColor = UIColor.blue.cgColor
+        iconView.layer.borderColor = #colorLiteral(red: 0.8349413276, green: 0.3352985978, blue: 0.3409483433, alpha: 0.6979258363)
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         contentView.addGestureRecognizer(tap)
