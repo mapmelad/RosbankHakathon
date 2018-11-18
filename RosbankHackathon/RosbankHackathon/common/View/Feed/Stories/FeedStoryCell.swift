@@ -13,6 +13,21 @@ final class FeedStoryCell: UICollectionViewCell, FeedStoryCellOutput {
 
     var onTap: VoidBlock?
 
+    // MARK: - Views
+
+    private let iconView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.clipsToBounds = true
+
+        return imageView
+    }()
+
+    // MARK: - Interface
+
+    func setup(with model: UIImage) {
+        iconView.image = model
+    }
+
     // MARK: - Init
 
     override init(frame: CGRect) {
@@ -26,8 +41,10 @@ final class FeedStoryCell: UICollectionViewCell, FeedStoryCellOutput {
     }
 
     private func internalInit() {
-        layer.borderWidth = 4
-        layer.borderColor = UIColor.blue.cgColor
+        addSubview(iconView)
+
+        iconView.layer.borderWidth = 4
+        iconView.layer.borderColor = UIColor.blue.cgColor
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         contentView.addGestureRecognizer(tap)
@@ -45,6 +62,7 @@ final class FeedStoryCell: UICollectionViewCell, FeedStoryCellOutput {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        layer.cornerRadius = frame.height / 2
+        iconView.pin.all()
+        iconView.layer.cornerRadius = iconView.frame.height / 2
     }
 }

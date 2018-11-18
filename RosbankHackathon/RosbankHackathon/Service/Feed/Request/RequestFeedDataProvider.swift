@@ -21,6 +21,7 @@ final class RequestFeedDataProviderImp: RequestFeedDataProvider {
                                       requestDescription: "description",
                                       categories: [.none],
                                       achievements: [.dealer],
+                                      rating: 1.2,
                                       deadline: Date()),
 
                      RequestFeedModel(name: "Some name",
@@ -28,6 +29,7 @@ final class RequestFeedDataProviderImp: RequestFeedDataProvider {
                                       requestDescription: "description",
                                       categories: [.none],
                                       achievements: [.dealer, .lightning],
+                                      rating: 1.2,
                                       deadline: Date())]
 
         return items.map { RequestFeedViewModel(model: $0) }
@@ -41,5 +43,6 @@ private extension RequestFeedViewModel {
         achievements = model.achievements.compactMap { $0.icon }
         categories = model.categories.map { $0.stringValue }.joined(separator: ",")
         deadline = model.deadline.humanString
+        rating = "\(model.rating)"
     }
 }
