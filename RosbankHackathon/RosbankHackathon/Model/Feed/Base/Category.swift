@@ -18,3 +18,11 @@ enum CategoryKind {
         }
     }
 }
+
+extension CategoryKind: Decodable {
+    init(from decoder: Decoder) throws {
+        throw AnyError()
+    }
+}
+
+struct AnyError: Error {}

@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6V-Ch-oNa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сделка с OOO &quot;Молодые и красивые&quot; успешно проведена! 🦕" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak3-OS-ZQo">
                                 <rect key="frame" x="10" y="15" width="357" height="40"/>
@@ -42,7 +42,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mno-jm-WnA" customClass="CosmosView" customModule="RosbankHackathon" customModuleProvider="target">
                                 <rect key="frame" x="77.5" y="106" width="220" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="rhA-c7-LjN"/>
                                 </constraints>
@@ -66,9 +66,8 @@
                                 <state key="normal" title="Оставить отзыв!"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.66902792450000004" green="0.73128575090000003" blue="0.9488992691" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="200" id="9Fg-Dm-Amg"/>
                             <constraint firstItem="S1c-sc-7JC" firstAttribute="centerX" secondItem="m6V-Ch-oNa" secondAttribute="centerX" id="BBV-TS-UHo"/>
                             <constraint firstItem="ak3-OS-ZQo" firstAttribute="top" secondItem="m6V-Ch-oNa" secondAttribute="top" constant="15" id="Hc6-8u-A6b"/>
                             <constraint firstItem="mno-jm-WnA" firstAttribute="top" secondItem="xX1-WL-9xV" secondAttribute="bottom" constant="10" id="JBr-vo-Pyl"/>

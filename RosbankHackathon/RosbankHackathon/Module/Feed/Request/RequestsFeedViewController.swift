@@ -29,13 +29,22 @@ final class RequestsFeedViewController: UIViewController {
         return provider
     }()
 
+    private let apiClient: EPAPIClient = {
+        let adapter = RequestAdapterImp(endpoint: "http://10.91.6.5:3000/")
+        let sender = RequestSenderImp()
+        let provider = ResponseProviderImp(adapter: adapter, sender: sender)
+        let client = EPAPIClient(provider: provider)
+
+        return client
+    }()
+
     private lazy var searchViewAccessory: UIView = {
         let view = FeedHeaderGeneralizeSearchView(with: searchProvider)
 
         return view
     }()
 
-    private lazy var datasource: [RequestFeedViewModel] = {
+    private var datasource: [RequestFeedViewModel] = {
         let provider: RequestFeedDataProvider = RequestFeedDataProviderImp()
 
         return provider.get()
@@ -46,6 +55,22 @@ final class RequestsFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+
+        apiClient.getArray(method: .requestsGet, params: []) { (result: [RequestFeedModel]) in
+            DispatchQueue.main.async {
+                self.updateFeed(with: result)
+            }
+        }
+    }
+
+    private func updateFeed(with items: [RequestFeedModel]) {
+        var cells = items.map { RequestFeedViewModel(model: $0) }
+        let dummy = cells[0]
+        cells.insert(dummy, at: 2)
+        cells.insert(dummy, at: 5)
+
+        datasource = cells
+        requestCollection.reloadData()
     }
 
     private func setupCollectionView() {
@@ -59,6 +84,14 @@ final class RequestsFeedViewController: UIViewController {
     private func registerCells() {
         let ticketsCell = UINib(nibName: "RequestsCollectionViewCell", bundle: nil)
         requestCollection.register(ticketsCell, forCellWithReuseIdentifier: "RequestsCollectionViewCell")
+
+        // [AwardStarsCell.self, AwardCollectionViewCell.self].forEach(requestCollection.register)
+
+        let starsCellNib = UINib(nibName: "AwardStarsCell", bundle: nil)
+        requestCollection.register(starsCellNib, forCellWithReuseIdentifier: "AwardStarsCell")
+
+        let awardCollectionNib = UINib(nibName: "AwardCollectionViewCell", bundle: nil)
+        requestCollection.register(awardCollectionNib, forCellWithReuseIdentifier: "AwardCollectionViewCell")
     }
 
     private func onStoryTap() {
@@ -90,6 +123,18 @@ extension RequestsFeedViewController: UICollectionViewDataSource {
     }
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.row == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AwardStarsCell", for: indexPath)
+
+            return cell
+        }
+
+        if indexPath.row == 5 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AwardCollectionViewCell", for: indexPath)
+
+            return cell
+        }
+
         let cell: RequestsCollectionViewCell = collectionView.dequeueReusableCell(at: indexPath)
         let model = getModel(at: indexPath)
         cell.setup(with: model)
@@ -113,6 +158,13 @@ extension RequestsFeedViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize: CGRect = UIScreen.main.bounds
         let screenWidth = screenSize.width
+
+        if indexPath.row == 2 {
+            return CGSize(width: screenWidth, height: 187)
+        }
+        if indexPath.row == 5 {
+            return CGSize(width: screenWidth, height: 111)
+        }
 
         let cell = getCell()
         let model = getModel(at: indexPath)

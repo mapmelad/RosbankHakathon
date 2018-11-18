@@ -16,33 +16,13 @@ final class RequestFeedDataProviderImp: RequestFeedDataProvider {
     // MARK: - Interface
 
     func get() -> [RequestFeedViewModel] {
-        let items = [RequestFeedModel(name: "Some name",
-                                      confirmedDeals: 44,
-                                      requestDescription: "description",
-                                      categories: [.none],
-                                      achievements: [.dealer],
-                                      rating: 1.2,
-                                      deadline: Date()),
-
-                     RequestFeedModel(name: "Some name",
-                                      confirmedDeals: 44,
-                                      requestDescription: "description",
-                                      categories: [.none],
-                                      achievements: [.dealer, .lightning],
-                                      rating: 1.2,
-                                      deadline: Date())]
+        let items: [RequestFeedModel] = [RequestFeedModel(name: "Some name",
+                                                          confirmedDeals: 44,
+                                                          requestDescription: "description",
+                                                          categories: [CategoryKind.none],
+                                                          achievements: [AchievementKind.dealer],
+                                                          rating: 1.2)]
 
         return items.map { RequestFeedViewModel(model: $0) }
-    }
-}
-
-private extension RequestFeedViewModel {
-    init(model: RequestFeedModel) {
-        name = model.name
-        requestDescription = model.requestDescription
-        achievements = model.achievements.compactMap { $0.icon }
-        categories = model.categories.map { $0.stringValue }.joined(separator: ",")
-        deadline = model.deadline.humanString
-        rating = "\(model.rating)"
     }
 }
